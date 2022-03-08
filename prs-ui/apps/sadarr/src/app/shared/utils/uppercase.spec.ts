@@ -1,4 +1,7 @@
-import { capitalizeFirstLetter, stringEqualCaseInsensitive } from './uppercase';
+import {
+  capitalizeFirstLetter,
+  equalCaseInsensitive,
+} from './string-extensions';
 
 describe('UpperCase', () => {
   describe('capitalizeFirstLetter', () => {
@@ -7,17 +10,17 @@ describe('UpperCase', () => {
     });
   });
 
-  describe('stringEqualCaseInsensitive', () => {
+  describe('equalCaseInsensitive', () => {
     it('test should equal Test', () => {
-      expect(stringEqualCaseInsensitive('test', 'Test'));
+      expect(equalCaseInsensitive('test', 'Test'));
     });
 
     it('Test should equal test', () => {
-      expect(stringEqualCaseInsensitive('Test', 'test'));
+      expect(equalCaseInsensitive('Test', 'test'));
     });
 
     it('TeSt should equal tEsT', () => {
-      expect(stringEqualCaseInsensitive('TeSt', 'tEsT'));
+      expect(equalCaseInsensitive('TeSt', 'tEsT'));
     });
   });
 });
