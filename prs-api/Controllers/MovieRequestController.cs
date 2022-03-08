@@ -23,5 +23,12 @@ namespace prs_api.Controllers
             var movies = _movieRequestManager.GetAll();
             return movies;
         }
+
+        [HttpGet("{userId}")]
+        public IEnumerable<MovieRequestModel> Get(Guid userId)
+        {
+            var movies = _movieRequestManager.GetByUserId(userId);
+            return movies;
+        }
     }
 }
