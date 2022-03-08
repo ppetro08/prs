@@ -57,7 +57,7 @@ import { PrsApiService } from './shared/api/prs.api.service';
     {
       provide: API_SETTINGS,
       useValue: {
-        url: 'https://localhost:7299',
+        url: environment.prsApiUrl,
       },
     },
   ],
