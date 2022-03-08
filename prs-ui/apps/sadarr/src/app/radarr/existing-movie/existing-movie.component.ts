@@ -1,6 +1,5 @@
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   OnDestroy,
   ViewChild,
@@ -9,33 +8,32 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, map, takeUntil } from 'rxjs/operators';
-import { Profile } from '../shared/profile-select/profile';
-import { AddEvent, Movie } from './models/radarr';
-import { RadarrApiService } from './radarr.api.service';
-import { ResultsContainerComponent } from './results/container/results-container.component';
+import { Profile } from '../../shared/profile-select/profile';
+import { AddEvent, Movie } from '../models/radarr';
+import { ResultsContainerComponent } from '../results/container/results-container.component';
 import {
   addMovie,
   clearSearch,
   radarrInit,
-  search,
-} from './state/radarr.actions';
-import { RadarrPartialState } from './state/radarr.reducer';
+  searchExistingMovies,
+} from '../state/radarr.actions';
+import { RadarrPartialState } from '../state/radarr.reducer';
 import {
   convertRadarrApiToRadarr,
   getRadarrProfiles,
   getRadarrSearchLoading,
   getRadarrSearchResults,
   showNoResultsFound,
-} from './state/radarr.selectors';
+} from '../state/radarr.selectors';
 
+// TODO - Think of way to share stuff logic with add
 @Component({
-  selector: 'pip-radarr',
-  templateUrl: 'radarr.component.html',
-  styleUrls: ['./radarr.component.scss'],
-  providers: [RadarrApiService],
+  selector: 'pip-existing-movie',
+  templateUrl: './existing-movie.component.html',
+  styleUrls: ['./existing-movie.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RadarrComponent implements OnDestroy {
+export class ExistingMovieComponent implements OnDestroy {
   @ViewChild(ResultsContainerComponent)
   resultsContainerComponent: ResultsContainerComponent | null = null;
 
@@ -53,7 +51,6 @@ export class RadarrComponent implements OnDestroy {
 
   constructor(
     private formBuilder: FormBuilder,
-    private changeDetectorRef: ChangeDetectorRef,
     private radarrStore: Store<RadarrPartialState>
   ) {
     this.radarrStore.dispatch(radarrInit());
@@ -74,7 +71,7 @@ export class RadarrComponent implements OnDestroy {
       .pipe(debounceTime(400), takeUntil(this.destroyed$))
       .subscribe((searchText: string) => {
         if (searchText !== '' && searchText !== null) {
-          this.radarrStore.dispatch(search({ searchText }));
+          this.radarrStore.dispatch(searchExistingMovies({ searchText }));
         } else {
           this.radarrStore.dispatch(clearSearch());
         }

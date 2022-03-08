@@ -1,10 +1,9 @@
 import { Dictionary } from '@ngrx/entity';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { RootFolderApi } from '../../shared/models/root-folder-api';
-import { capitalizeFirstLetter } from '../../shared/utils/uppercase';
+import { capitalizeFirstLetter } from '../../shared/utils/string-extensions';
 import { Movie } from '../models/radarr';
 import { MovieLookupApi, MovieStatusApi } from '../models/radarr-api';
-import { RadarrEntity } from './radarr.models';
 import { radarrAdapter, RADARR_FEATURE_KEY, State } from './radarr.reducer';
 
 export const getRadarrState = createFeatureSelector<State>(RADARR_FEATURE_KEY);
@@ -26,13 +25,6 @@ export const getRadarrAllMovies = createSelector(
   (state: State) => selectAll(state)
 );
 
-export const getRadarrMoviesFiltered = (searchText: string) =>
-  createSelector(getRadarrState, (state: State) =>
-    selectAll(state).filter((v) =>
-      stringEqualCaseInsensitive(v.title, searchText)
-    )
-  );
-
 export const getRadarrMoviesDictionary = createSelector(
   getRadarrState,
   (state: State) => selectEntities(state)
@@ -41,7 +33,7 @@ export const getRadarrMoviesDictionary = createSelector(
 export const getRadarrMovies = (seriesId: number) =>
   createSelector(
     getRadarrMoviesDictionary,
-    (seriesDictionary: Dictionary<RadarrEntity>) => seriesDictionary[seriesId]
+    (seriesDictionary: Dictionary<MovieLookupApi>) => seriesDictionary[seriesId]
   );
 
 export const getRadarrRootFolders = createSelector(
@@ -111,10 +103,4 @@ export function convertRadarrApiToRadarr(radarrApi: MovieLookupApi): Movie {
     length: radarrApi.runtime,
     year: radarrApi.year,
   };
-}
-function stringEqualCaseInsensitive(
-  title: string,
-  searchText: string
-): unknown {
-  throw new Error('Function not implemented.');
 }

@@ -3,13 +3,12 @@ import { RootFolderApi } from '../../shared/models/root-folder-api';
 import { Profile } from '../../shared/profile-select/profile';
 import { AddEvent } from '../models/radarr';
 import { MovieLookupApi } from '../models/radarr-api';
-import { RadarrEntity } from './radarr.models';
 
 export const radarrInit = createAction('[Radarr Page] Init');
 export const radarrInitSuccess = createAction(
   '[Radarr/API] Radarr Init Success',
   props<{
-    entities: RadarrEntity[];
+    entities: MovieLookupApi[];
     profiles: Profile[];
     rootFolders: RootFolderApi[];
   }>()
@@ -21,6 +20,10 @@ export const radarrInitFailure = createAction(
 
 export const search = createAction(
   '[Radarr/API] Search',
+  props<{ searchText: string }>()
+);
+export const searchExistingMovies = createAction(
+  '[Radarr/API] Search Existing Movies',
   props<{ searchText: string }>()
 );
 export const searchSuccess = createAction(

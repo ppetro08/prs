@@ -10,7 +10,7 @@ import {
   getAuthenticationIsLoggedIn,
   getUser,
 } from './authentication/state/authentication.selectors';
-import { isAuthenticationRoute } from './shared/utils/string';
+import { isAuthenticationRoute } from './shared/utils/string-extensions';
 
 @Component({
   selector: 'pip-root',

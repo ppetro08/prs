@@ -4,11 +4,10 @@ import { RootFolderApi } from '../../shared/models/root-folder-api';
 import { Profile } from '../../shared/profile-select/profile';
 import { MovieLookupApi } from '../models/radarr-api';
 import * as RadarrActions from './radarr.actions';
-import { RadarrEntity } from './radarr.models';
 
 export const RADARR_FEATURE_KEY = 'radarr';
 
-export interface State extends EntityState<RadarrEntity> {
+export interface State extends EntityState<MovieLookupApi> {
   error?: string | null; // last known error (if any)
   loading: boolean;
   profiles: Profile[];
@@ -22,8 +21,8 @@ export interface RadarrPartialState {
   readonly [RADARR_FEATURE_KEY]: State;
 }
 
-export const radarrAdapter: EntityAdapter<RadarrEntity> =
-  createEntityAdapter<RadarrEntity>();
+export const radarrAdapter: EntityAdapter<MovieLookupApi> =
+  createEntityAdapter<MovieLookupApi>();
 
 export const initialState: State = radarrAdapter.getInitialState({
   loading: false,

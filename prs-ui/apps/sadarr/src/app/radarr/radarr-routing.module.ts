@@ -1,11 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RadarrComponent } from './radarr.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
+import { ExistingMovieComponent } from './existing-movie/existing-movie.component';
 
 const routes: Routes = [
   {
+    path: 'movies',
+    component: ExistingMovieComponent,
+    data: {
+      title: 'Movies',
+    },
+  },
+  {
+    path: 'add-movie',
+    component: AddMovieComponent,
+    data: {
+      title: 'Add Movie',
+    },
+  },
+  {
     path: '',
-    component: RadarrComponent,
+    redirectTo: 'movies',
+    pathMatch: 'full',
   },
 ];
 

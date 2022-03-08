@@ -13,9 +13,10 @@ import { MovieRequestsApiService } from '../api/movie-requests.api.service';
 import { API_SETTINGS } from '../shared/api/app-settings';
 import { PrsApiService } from '../shared/api/prs.api.service';
 import { LoadingOverlayModule } from '../shared/loading-overlay/loading-overlay.module';
+import { AddMovieComponent } from './add-movie/add-movie.component';
+import { ExistingMovieComponent } from './existing-movie/existing-movie.component';
 import { RadarrRoutingModule } from './radarr-routing.module';
 import { RadarrApiService } from './radarr.api.service';
-import { RadarrComponent } from './radarr.component';
 import { ResultsModule } from './results/results.module';
 import { RadarrEffects } from './state/radarr.effects';
 import * as fromRadarr from './state/radarr.reducer';
@@ -36,7 +37,7 @@ import * as fromRadarr from './state/radarr.reducer';
     StoreModule.forFeature(fromRadarr.RADARR_FEATURE_KEY, fromRadarr.reducer),
     EffectsModule.forFeature([RadarrEffects]),
   ],
-  declarations: [RadarrComponent],
+  declarations: [AddMovieComponent, ExistingMovieComponent],
   providers: [
     RadarrApiService,
     DataPersistence,

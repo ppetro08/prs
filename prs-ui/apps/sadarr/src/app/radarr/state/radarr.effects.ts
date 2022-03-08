@@ -5,11 +5,14 @@ import { Store } from '@ngrx/store';
 import { fetch, pessimisticUpdate } from '@nrwl/angular';
 import { forkJoin } from 'rxjs';
 import { map, tap, withLatestFrom } from 'rxjs/operators';
+import { containsCaseInsensitive } from '../../shared/utils/string-extensions';
 import { AddMovieResponseApi } from '../models/radarr-api';
 import { RadarrApiService } from '../radarr.api.service';
 import * as RadarrActions from './radarr.actions';
+import { searchSuccess } from './radarr.actions';
 import { State } from './radarr.reducer';
 import {
+  getRadarrAllMovies,
   getRadarrDefaultFolderFromRootFolders,
   getRadarrState,
 } from './radarr.selectors';
@@ -146,6 +149,20 @@ export class RadarrEffects {
           console.error('Error', error);
           return RadarrActions.searchFailure({ error });
         },
+      })
+    )
+  );
+
+  searchExistingMovies$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(RadarrActions.searchExistingMovies),
+      withLatestFrom(this.store.select(getRadarrAllMovies)),
+      map(([action, movies]) => {
+        const filteredMovies = movies.filter((m) =>
+          containsCaseInsensitive(m.title, action.searchText)
+        );
+
+        return searchSuccess({ movies: filteredMovies });
       })
     )
   );
