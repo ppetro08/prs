@@ -19,7 +19,7 @@ namespace prs_api.Managers
             return movies;
         }
 
-        public MovieRequestModel GetById(int id)
+        public MovieRequestModel? GetById(int id)
         {
             var movie = _movieRequestService.GetById(id);
             return movie;
