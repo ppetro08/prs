@@ -26,6 +26,13 @@ export const getRadarrAllMovies = createSelector(
   (state: State) => selectAll(state)
 );
 
+export const getRadarrMoviesFiltered = (searchText: string) =>
+  createSelector(getRadarrState, (state: State) =>
+    selectAll(state).filter((v) =>
+      stringEqualCaseInsensitive(v.title, searchText)
+    )
+  );
+
 export const getRadarrMoviesDictionary = createSelector(
   getRadarrState,
   (state: State) => selectEntities(state)
@@ -104,4 +111,10 @@ export function convertRadarrApiToRadarr(radarrApi: MovieLookupApi): Movie {
     length: radarrApi.runtime,
     year: radarrApi.year,
   };
+}
+function stringEqualCaseInsensitive(
+  title: string,
+  searchText: string
+): unknown {
+  throw new Error('Function not implemented.');
 }
