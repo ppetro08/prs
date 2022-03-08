@@ -1,0 +1,33 @@
+<form [formGroup]="form" class="login-form" (ngSubmit)="login(form)">
+  <pip-authentication-container headerText="Login">
+    <ng-container authenticationBody>
+      <mat-form-field appearance="outline" id="email">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" autocomplete="email" required />
+        <mat-error *ngIf="form.controls.email.hasError('email')">
+          Invalid email
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" id="password">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" required />
+      </mat-form-field>
+
+      <mat-error class="api-error" *ngIf="error">
+        {{ error.message }}
+      </mat-error>
+
+      <button mat-raised-button color="primary" id="login" type="submit">
+        Login
+      </button>
+      <a
+        mat-raised-button
+        color="primary"
+        id="register"
+        [routerLink]="['/authentication/register']"
+      >
+        Register
+      </a>
+    </ng-container>
+  </pip-authentication-container>
+</form>

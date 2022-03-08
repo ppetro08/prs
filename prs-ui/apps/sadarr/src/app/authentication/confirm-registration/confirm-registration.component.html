@@ -1,0 +1,31 @@
+<div class="confirm-registration">
+  <pip-authentication-container
+    headerText="Registration Complete"
+    *ngIf="verified; else unVerified"
+  >
+    <ng-container authenticationBody>
+      <mat-icon>check_circle</mat-icon>
+      <p>Registration complete.</p>
+      <a [routerLink]="['/']" mat-raised-button color="primary">Login</a>
+    </ng-container>
+  </pip-authentication-container>
+
+  <ng-template #unVerified>
+    <pip-authentication-container headerText="Finalize Registration">
+      <ng-container authenticationBody>
+        <p>Click the button below to complete your account registration.</p>
+
+        <mat-error class="api-error" *ngIf="error">
+          {{ error.message }}
+        </mat-error>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="confirmRegistration()"
+        >
+          Confirm Registration
+        </button>
+      </ng-container>
+    </pip-authentication-container>
+  </ng-template>
+</div>

@@ -1,0 +1,18 @@
+<div class="nav-bar" *ngIf="showNavBar | async">
+  <div class="nav-bar-left">
+    <a class="nav-item" mat-button routerLink="/">Home</a>
+    <a class="nav-item" mat-button routerLink="/radarr">Movies</a>
+    <!-- <a class="nav-item" mat-button routerLink="/sonarr">Tv Shows</a> -->
+    <a class="nav-item" mat-button routerLink="/admin" *ngIf="isAdmin | async">
+      Admin
+    </a>
+  </div>
+  <div class="nav-bar-right">
+    <div class="username" *ngIf="userName">{{ userName }}</div>
+    <button class="nav-item logout" mat-button (click)="logout()">
+      Logout
+    </button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

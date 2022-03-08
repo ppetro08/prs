@@ -1,0 +1,22 @@
+<h1>Movies</h1>
+
+<form [formGroup]="form">
+  <mat-form-field floatLabel="always" appearance="outline">
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      placeholder="Search for a movie"
+      formControlName="search"
+      class="radarr-search"
+    />
+  </mat-form-field>
+</form>
+<pip-loading-overlay [show]="searchLoading$ | async">
+  <pip-radarr-results-container
+    [data]="data$ | async"
+    [profiles]="profiles$ | async"
+    [showNoResultsFound]="showNoResultsFound$ | async"
+    (addClick)="addClicked($event)"
+  >
+  </pip-radarr-results-container>
+</pip-loading-overlay>

@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+:host {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(darken($background-color, 20), 0.3);
+  // we create a new stacking context so that any children
+  // with a z-index don't show up 'on top of' the backdrop
+  z-index: 1;
+  min-height: 50px;
+}

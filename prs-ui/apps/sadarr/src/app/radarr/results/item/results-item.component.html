@@ -1,0 +1,76 @@
+<form *ngIf="item" [formGroup]="formGroup" (ngSubmit)="onSubmit(item)">
+  <div class="results-item-header">
+    <div class="result-detail-title">
+      <div class="result-detail-title-text">
+        {{ item.title }}
+      </div>
+      <span class="result-detail-title-year">({{ item.year }})</span>
+      <pip-lozenge
+        *ngIf="item.monitored"
+        [lozengeSize]="'large'"
+        [lozengeColor]="'success'"
+      >
+        Added
+      </pip-lozenge>
+    </div>
+    <div class="result-detail-additional-info">
+      <pip-lozenge *ngIf="item.rating" [lozengeSize]="'small'">
+        <mat-icon color="warn" pipLozengeIcon>favorite</mat-icon>
+        <div class="lozenge-text">{{ item.rating }}%</div>
+      </pip-lozenge>
+      <pip-lozenge *ngIf="item.length" [lozengeSize]="'small'">
+        {{ item.length | pipTime }}
+      </pip-lozenge>
+      <pip-lozenge *ngIf="item.studio" [lozengeSize]="'small'">
+        {{ item.studio }}
+      </pip-lozenge>
+      <pip-lozenge *ngIf="item.status" [lozengeSize]="'small'">
+        {{ item.status }}
+      </pip-lozenge>
+      <pip-lozenge
+        *ngIf="item.hasFile"
+        [lozengeColor]="'success'"
+        [lozengeSize]="'small'"
+      >
+        Downloaded
+      </pip-lozenge>
+      <pip-lozenge *ngIf="item.profileId" [lozengeSize]="'small'">
+        {{ item.profileId | pipQuality | async }}
+      </pip-lozenge>
+    </div>
+  </div>
+  <div class="results-item-body">
+    <div class="thumbnail-container" *ngIf="item.remotePoster">
+      <img [src]="item.remotePoster" />
+    </div>
+    <div class="result-detail" [ngClass]="{ 'no-margin': !item.remotePoster }">
+      <div class="result-detail-description" [title]="item.overview">
+        {{ item.overview }}
+      </div>
+
+      <div class="result-actions">
+        <mat-form-field class="result-actions-input" *ngIf="!item.monitored">
+          <mat-label>Quality</mat-label>
+          <pip-profile-select
+            formControlName="profile"
+            [profiles]="profiles"
+          ></pip-profile-select>
+        </mat-form-field>
+        <div class="result-actions-buttons">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            *ngIf="!item.monitored; else goToDetailPage"
+          >
+            Add
+          </button>
+          <ng-template #goToDetailPage>
+            <!-- TODO:P - Update routerLink -->
+            <a mat-raised-button color="primary" href="/">Go to detail page</a>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

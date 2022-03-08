@@ -1,0 +1,89 @@
+<!-- TODO:P - Result should show if there are any missing episodes and how many -->
+<!-- Added should be a little more complex and maybe show if it exists and if it is monitored separately -->
+<!-- If added you should only be able to add more seasons from the detail page -->
+<!-- TODO - Show quality on added shows -->
+<form *ngIf="item" [formGroup]="formGroup" (ngSubmit)="onSubmit(item)">
+  <div class="results-item-header">
+    <div class="result-detail-title">
+      <div class="result-detail-title-text">
+        {{ item.title }}
+      </div>
+      <span class="result-detail-title-year">({{ item.year }})</span>
+      <pip-lozenge
+        *ngIf="item.added"
+        [lozengeSize]="'large'"
+        [lozengeColor]="'success'"
+      >
+        Added
+      </pip-lozenge>
+    </div>
+    <div class="result-detail-additional-info">
+      <pip-lozenge *ngIf="item.rating" [lozengeSize]="'small'">
+        <mat-icon color="warn" pipLozengeIcon>favorite</mat-icon>
+        <div class="lozenge-text">{{ item.rating }}%</div>
+      </pip-lozenge>
+      <pip-lozenge *ngIf="item.network" [lozengeSize]="'small'">
+        {{ item.network }}
+      </pip-lozenge>
+      <pip-lozenge [lozengeSize]="'small'">
+        {{ item.seasonCount }} Season(s)
+      </pip-lozenge>
+      <pip-lozenge *ngIf="item.status" [lozengeSize]="'small'">
+        {{ item.status }}
+      </pip-lozenge>
+    </div>
+  </div>
+  <div class="results-item-body">
+    <div class="thumbnail-container" *ngIf="item.remotePoster">
+      <img [src]="item.remotePoster" />
+    </div>
+    <div class="result-detail" [ngClass]="{ 'no-margin': !item.remotePoster }">
+      <div class="result-detail-description" [title]="item.overview">
+        {{ item.overview }}
+      </div>
+
+      <!-- TODO:P - Display number of episodes, maybe even more info like episodes missing from seasons -->
+      <div class="result-actions">
+        <div class="result-actions-inputs" *ngIf="!item.added">
+          <div class="all-multi-select result-actions-input">
+            <mat-checkbox formControlName="all">All</mat-checkbox>
+            <mat-form-field floatLabel="always">
+              <mat-label>Seasons</mat-label>
+              <mat-select multiple formControlName="seasons" required>
+                <mat-option
+                  *ngFor="let season of item.seasons"
+                  [value]="season.seasonNumber"
+                >
+                  Season {{ season.seasonNumber }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <mat-form-field class="result-actions-input">
+            <mat-label>Quality</mat-label>
+            <pip-profile-select
+              formControlName="profile"
+              [profiles]="profiles"
+            ></pip-profile-select>
+          </mat-form-field>
+        </div>
+        <div class="result-actions-buttons">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            *ngIf="!item.added; else goToDetailPage"
+          >
+            Add
+          </button>
+          <ng-template #goToDetailPage>
+            <!-- TODO:P - Figure out how to do a link in storybook -->
+            <a mat-raised-button color="primary" href="/">Go to detail page</a>
+          </ng-template>
+          <!-- TODO:P - Search should update episodes that are unmonitored to monitored -->
+          <!-- TODO:P - Repeated search until nothing is found -->
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

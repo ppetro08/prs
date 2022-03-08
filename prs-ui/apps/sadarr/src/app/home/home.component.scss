@@ -1,0 +1,38 @@
+@import '../../styles/themes';
+@import '../../styles/variables';
+
+.home-container {
+  padding: 0 2em 2em;
+  display: flex;
+  flex-wrap: wrap;
+
+  h1 {
+    margin-top: 0;
+    margin-left: 16px;
+    width: 100%;
+  }
+
+  .home-movie-add,
+  .home-tv-show-add,
+  .home-movie-existing,
+  .home-tv-show-existing {
+    flex: 1 1 45%;
+    height: 320px;
+    margin: 1em;
+    border-radius: 4px;
+    background-color: $result-item-background-color;
+
+    &:hover {
+      background-color: $border-color;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    // Temporary until figure out what to put in background
+    align-items: center;
+    display: flex;
+    h1 {
+      text-align: center;
+    }
+  }
+}

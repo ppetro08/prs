@@ -1,0 +1,3223 @@
+{
+  "radarr": [
+    {
+      "title": "The Batman",
+      "originalTitle": "The Batman",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Батман",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 29,
+            "name": "Bulgarian"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Бэтмен",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Бэтмен",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 11,
+            "name": "Russian"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "蝙蝠俠",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Betmen",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "দ্য ব্যাটম্যান",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "বাদরমানব",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman",
+      "sizeOnDisk": 0,
+      "status": "announced",
+      "overview": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+      "inCinemas": "2022-03-01T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/6bdffb2ffbb4690ca2e824f8c508ed93fd72a332f679412f59f4b72b68d95847/3VFI3zbuNhXzx7dIbYdmvBLekyB.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/3VFI3zbuNhXzx7dIbYdmvBLekyB.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/271317e7faff4d09a3d3624e7e25d821e30f82078c9d6f06791fa83b9a3448e7/1K7jIv3vy6dIXwo0CQNwokLeJc5.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/1K7jIv3vy6dIXwo0CQNwokLeJc5.jpg"
+        }
+      ],
+      "website": "https://www.thebatman.com",
+      "remotePoster": "https://image.tmdb.org/t/p/original/3VFI3zbuNhXzx7dIbYdmvBLekyB.jpg",
+      "year": 2022,
+      "hasFile": false,
+      "youTubeTrailerId": "u34gHaRiBIU",
+      "studio": "6th & Idaho",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 175,
+      "cleanTitle": "thebatman",
+      "imdbId": "tt1877830",
+      "tmdbId": 414906,
+      "titleSlug": "414906",
+      "folder": "The Batman (2022)",
+      "certification": "PG-13",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "tmdb": {
+          "votes": 0,
+          "value": 0,
+          "type": "user"
+        }
+      }
+    },
+    {
+      "title": "Batman",
+      "originalTitle": "Batman",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Betmen",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10341
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Батман",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 29,
+            "name": "Bulgarian"
+          },
+          "id": 10342
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "बैटमैन",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10343
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "蝙蝠俠",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10344
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Netopierí muž",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10345
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Бетмен",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10346
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Бэтмен",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 11,
+            "name": "Russian"
+          },
+          "id": 10347
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Tim Burton’s Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10348
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Batman (1989)",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 10349
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 1158,
+          "title": "Batman 1",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          },
+          "id": 10350
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman",
+      "sizeOnDisk": 19099775010,
+      "status": "released",
+      "overview": "Batman must face his most ruthless nemesis when a deformed madman calling himself \"The Joker\" seizes control of Gotham's criminal underworld.",
+      "inCinemas": "1989-06-23T00:00:00Z",
+      "physicalRelease": "1998-09-30T00:00:00Z",
+      "digitalRelease": "2002-09-06T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCover/1158/poster.jpg?lastWrite=637743562907332834",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/kbeWnmnHNEnuVej6wcjUv0eY6IL.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCover/1158/fanart.jpg?lastWrite=637739890587710495",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/2va32apQP97gvUxaMnL5wYt4CRB.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/kbeWnmnHNEnuVej6wcjUv0eY6IL.jpg",
+      "year": 1989,
+      "hasFile": true,
+      "youTubeTrailerId": "ftNOhfNjXjk",
+      "studio": "The Guber-Peters Company",
+      "path": "E:\\Movies\\Batman (1989)",
+      "qualityProfileId": 6,
+      "monitored": true,
+      "minimumAvailability": "announced",
+      "isAvailable": true,
+      "folderName": "E:\\Movies\\Batman (1989)",
+      "runtime": 126,
+      "cleanTitle": "batman",
+      "imdbId": "tt0096895",
+      "tmdbId": 268,
+      "titleSlug": "268",
+      "folder": "Batman (1989)",
+      "certification": "PG-13",
+      "genres": [
+        "Fantasy",
+        "Action"
+      ],
+      "tags": [],
+      "added": "2021-12-01T20:57:37Z",
+      "ratings": {
+        "imdb": {
+          "votes": 356748,
+          "value": 7.5,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 5962,
+          "value": 7.2,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 69,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 71,
+          "type": "user"
+        }
+      },
+      "movieFile": {
+        "movieId": 1158,
+        "relativePath": "Batman.mkv",
+        "path": "E:\\Movies\\Batman (1989)\\Batman.mkv",
+        "size": 19099775010,
+        "dateAdded": "2021-12-22T15:17:41Z",
+        "sceneName": "Batman.1989.1080p.BluRay.10xRus.Ukr.Eng.HDCLUB-Skazhutin-Rakuv01",
+        "indexerFlags": 0,
+        "quality": {
+          "quality": {
+            "id": 7,
+            "name": "Bluray-1080p",
+            "source": "bluray",
+            "resolution": 1080,
+            "modifier": "none"
+          },
+          "revision": {
+            "version": 1,
+            "real": 0,
+            "isRepack": false
+          }
+        },
+        "mediaInfo": {
+          "audioBitrate": 640000,
+          "audioChannels": 5.1,
+          "audioCodec": "AC3",
+          "audioLanguages": "rus/rus/rus/rus/rus/rus/rus/rus/rus/rus/ukr/eng/eng",
+          "audioStreamCount": 13,
+          "videoBitDepth": 8,
+          "videoBitrate": 0,
+          "videoCodec": "x264",
+          "videoDynamicRangeType": "",
+          "videoFps": 23.976,
+          "resolution": "1920x1080",
+          "runTime": "2:06:19",
+          "scanType": "Progressive",
+          "subtitles": "rus/rus/ukr/eng/eng"
+        },
+        "originalFilePath": "Batman.1989.1080p.BluRay.10xRus.Ukr.Eng.HDCLUB-Skazhutin-Rakuv01\\f2854bea9b684556a3884d05d1f384cd.mkv",
+        "qualityCutoffNotMet": false,
+        "languages": [
+          {
+            "id": 11,
+            "name": "Russian"
+          },
+          {
+            "id": 1,
+            "name": "English"
+          }
+        ],
+        "releaseGroup": "Skazhutin",
+        "edition": "",
+        "id": 2340
+      },
+      "collection": {
+        "name": "Batman Collection",
+        "tmdbId": 120794,
+        "images": []
+      },
+      "id": 1158
+    },
+    {
+      "title": "Batman Begins",
+      "originalTitle": "Batman Begins",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 527,
+          "title": "האביר האפל: באטמן מתחיל",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 2097
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 527,
+          "title": "Betmen počinje",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 2099
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 527,
+          "title": "Kara Şövalye: Batman Başlıyor",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 17,
+            "name": "Turkish"
+          },
+          "id": 2100
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 527,
+          "title": "蝙蝠侠.侠影之谜",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          },
+          "id": 2101
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman begins",
+      "sizeOnDisk": 13386727229,
+      "status": "released",
+      "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+      "inCinemas": "2005-06-15T00:00:00Z",
+      "physicalRelease": "2005-10-14T00:00:00Z",
+      "digitalRelease": "2008-05-19T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCover/527/poster.jpg?lastWrite=637657798830640249",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/8RW2runSEc34IwKN2D1aPcJd2UL.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCover/527/fanart.jpg?lastWrite=637772130907293791",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/y9AuabF1SXnn3xZ0tAJLLhv33Uj.jpg"
+        }
+      ],
+      "website": "https://www.warnerbros.com/movies/batman-begins/",
+      "remotePoster": "https://image.tmdb.org/t/p/original/8RW2runSEc34IwKN2D1aPcJd2UL.jpg",
+      "year": 2005,
+      "hasFile": true,
+      "youTubeTrailerId": "uhkVY9GLUmU",
+      "studio": "Warner Bros. Pictures",
+      "path": "E:\\Movies\\Batman Begins (2005)",
+      "qualityProfileId": 6,
+      "monitored": true,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "E:\\Movies\\Batman Begins (2005)",
+      "runtime": 140,
+      "cleanTitle": "batmanbegins",
+      "imdbId": "tt0372784",
+      "tmdbId": 272,
+      "titleSlug": "272",
+      "folder": "Batman Begins (2005)",
+      "certification": "PG-13",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "tags": [],
+      "added": "2020-06-09T21:25:31Z",
+      "ratings": {
+        "imdb": {
+          "votes": 1386312,
+          "value": 8.2,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 17137,
+          "value": 7.7,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 70,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 84,
+          "type": "user"
+        }
+      },
+      "movieFile": {
+        "movieId": 527,
+        "relativePath": "Batman Begins.mkv",
+        "path": "E:\\Movies\\Batman Begins (2005)\\Batman Begins.mkv",
+        "size": 13386727229,
+        "dateAdded": "2021-11-23T05:37:02Z",
+        "indexerFlags": 0,
+        "quality": {
+          "quality": {
+            "id": 3,
+            "name": "WEBDL-1080p",
+            "source": "webdl",
+            "resolution": 1080,
+            "modifier": "none"
+          },
+          "revision": {
+            "version": 1,
+            "real": 0,
+            "isRepack": false
+          }
+        },
+        "mediaInfo": {
+          "audioBitrate": 1536000,
+          "audioChannels": 5.1,
+          "audioCodec": "DTS",
+          "audioLanguages": "eng",
+          "audioStreamCount": 1,
+          "videoBitDepth": 8,
+          "videoBitrate": 0,
+          "videoCodec": "x264",
+          "videoDynamicRangeType": "",
+          "videoFps": 23.976,
+          "resolution": "1920x800",
+          "runTime": "2:20:02",
+          "scanType": "Progressive",
+          "subtitles": "eng/tur/eng/fre/ger/spa/swe/heb/bul/cze"
+        },
+        "qualityCutoffNotMet": false,
+        "languages": [
+          {
+            "id": 1,
+            "name": "English"
+          }
+        ],
+        "edition": "",
+        "id": 2235
+      },
+      "collection": {
+        "name": "The Dark Knight Collection",
+        "tmdbId": 263,
+        "images": []
+      },
+      "id": 527
+    },
+    {
+      "title": "Batman & Robin",
+      "originalTitle": "Batman & Robin",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 4",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman and Robin",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman und Robin",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 4 - Batman et Robin",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 4 - Batman & Robin",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "배트맨과 로빈",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 4",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman robin",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Batman and Robin deal with relationship issues while preventing Mr. Freeze and Poison Ivy from attacking Gotham City.",
+      "inCinemas": "1997-06-20T00:00:00Z",
+      "physicalRelease": "1997-10-01T00:00:00Z",
+      "digitalRelease": "2002-04-04T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/7377057f207d5d2b9a4fe369f4d467ce0ee1996e38822cef4a11d650a623f90f/bsg0mrxUKyJoL4oSGP5mlhEsqp.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/bsg0mrxUKyJoL4oSGP5mlhEsqp.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/f49abd2178b0f1cd465283975ed4700034ff0b8d9b0192ff9bd68b4b825a92e5/rpOqHZMNIaI4qP4r7nw1B7oA0mx.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/rpOqHZMNIaI4qP4r7nw1B7oA0mx.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/bsg0mrxUKyJoL4oSGP5mlhEsqp.jpg",
+      "year": 1997,
+      "hasFile": false,
+      "youTubeTrailerId": "YH9ju47g4x0",
+      "studio": "DC Comics",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 125,
+      "cleanTitle": "batmanrobin",
+      "imdbId": "tt0118688",
+      "tmdbId": 415,
+      "titleSlug": "415",
+      "folder": "Batman & Robin (1997)",
+      "certification": "PG-13",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Fantasy"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 244360,
+          "value": 3.8,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 3979,
+          "value": 4.3,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 28,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 12,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman Collection",
+        "tmdbId": 120794,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman Returns",
+      "originalTitle": "Batman Returns",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 2",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 2 - Batman Returns",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Le retour de Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman regresa",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman vuelve",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 3,
+            "name": "Spanish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman : Le Défi",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 2",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman Regressa",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 18,
+            "name": "Portuguese"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman returns",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "While Batman deals with a deformed man calling himself the Penguin, an employee of a corrupt businessman transforms into the Catwoman.",
+      "inCinemas": "1992-06-19T00:00:00Z",
+      "physicalRelease": "1999-04-12T00:00:00Z",
+      "digitalRelease": "2002-12-21T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/1ff3bc41d8096ff32a9f5b40659d2dd6a4b29e6107ec24a3537f9a2fc4e697a2/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/96858cda44d8d883958ff40d4c7dc5ea413dcef2a54d1bf113a01f7e959b2dda/7x4SNxO5HWArighxxFeet5sn3il.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/7x4SNxO5HWArighxxFeet5sn3il.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+      "year": 1992,
+      "hasFile": false,
+      "youTubeTrailerId": "TlbtLfWvFbo",
+      "studio": "Warner Bros. Pictures",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 126,
+      "cleanTitle": "batmanreturns",
+      "imdbId": "tt0103776",
+      "tmdbId": 364,
+      "titleSlug": "364",
+      "folder": "Batman Returns (1992)",
+      "certification": "PG-13",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 289385,
+          "value": 7,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 4952,
+          "value": 6.9,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 68,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 80,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman Collection",
+        "tmdbId": 120794,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman: Hush",
+      "originalTitle": "Batman: Hush",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman silence",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman hush",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "A mysterious new villain known only as Hush uses a gallery of villains to destroy Batman's crime-fighting career as well as Bruce Wayne's personal life, which has been further complicated by a  relationship with Selina Kyle/Catwoman.",
+      "physicalRelease": "2019-08-12T00:00:00Z",
+      "digitalRelease": "2019-07-20T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/91d463ca013a650c06e860961d467b1db2d083c4b3626b6d291660b5ab21b17a/eiVQORVyVuNNZHPAELuWtlXoQsD.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/eiVQORVyVuNNZHPAELuWtlXoQsD.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/ae92b223aad2aa2c51172bcc3068daea03a0196c8eca86fcb2623bb2a323b8c4/pJS6cZBDKkjh9zPno74EmPErdaw.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/pJS6cZBDKkjh9zPno74EmPErdaw.jpg"
+        }
+      ],
+      "website": "https://www.warnerbros.com/movies/batman-hush",
+      "remotePoster": "https://image.tmdb.org/t/p/original/eiVQORVyVuNNZHPAELuWtlXoQsD.jpg",
+      "year": 2019,
+      "hasFile": false,
+      "youTubeTrailerId": "cQFFnUg0u70",
+      "studio": "DC Entertainment",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 82,
+      "cleanTitle": "batmanhush",
+      "imdbId": "tt8752440",
+      "tmdbId": 537056,
+      "titleSlug": "537056",
+      "folder": "Batman Hush (2019)",
+      "certification": "PG-13",
+      "genres": [
+        "Science Fiction",
+        "Crime",
+        "Animation"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 17031,
+          "value": 6.9,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 587,
+          "value": 7.3,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 88,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Son of Batman Collection",
+        "tmdbId": 334996,
+        "images": []
+      }
+    },
+    {
+      "title": "The Lego Batman Movie",
+      "originalTitle": "The Lego Batman Movie",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "לגו באטמן: הסרט",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Lego Batman - Le Film",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Η ΤΑΙΝΙΑ LEGO BATMAN",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Lego Batman: La Película",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "La Lego Pelicula Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 3,
+            "name": "Spanish"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "lego batman movie",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "A cooler-than-ever Bruce Wayne must deal with the usual suspects as they plan to rule Gotham City, while discovering that he has accidentally adopted a teenage orphan who wishes to become his sidekick.",
+      "inCinemas": "2017-02-08T00:00:00Z",
+      "physicalRelease": "2017-06-13T00:00:00Z",
+      "digitalRelease": "2017-05-19T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/c26020c780c45283ce2cfbcee674182f7d0c4844e1c190d667416e6bda5345f7/snGwr2gag4Fcgx2OGmH9otl6ofW.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/snGwr2gag4Fcgx2OGmH9otl6ofW.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/2f907e1b7c2987a8871a2360c395af60a35139d0e20e013e511568c4368824e0/jqnbac3oind5VOcAN0mTXyapOGh.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/jqnbac3oind5VOcAN0mTXyapOGh.jpg"
+        }
+      ],
+      "website": "http://www.legobatman.com",
+      "remotePoster": "https://image.tmdb.org/t/p/original/snGwr2gag4Fcgx2OGmH9otl6ofW.jpg",
+      "year": 2017,
+      "hasFile": false,
+      "youTubeTrailerId": "rGQUKzSDhrg",
+      "studio": "Lin Pictures",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 104,
+      "cleanTitle": "thelegobatmanmovie",
+      "imdbId": "tt4116284",
+      "tmdbId": 324849,
+      "titleSlug": "324849",
+      "folder": "The Lego Batman Movie (2017)",
+      "certification": "PG",
+      "genres": [
+        "Animation",
+        "Family",
+        "Action"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 140776,
+          "value": 7.3,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 3954,
+          "value": 7.2,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 75,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 90,
+          "type": "user"
+        }
+      }
+    },
+    {
+      "title": "Batman vs. Robin",
+      "originalTitle": "Batman vs. Robin",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman et la conspiration des hiboux",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman vs robin",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Damian Wayne is having a hard time coping with his father's \"no killing\" rule. Meanwhile, Gotham is going through hell with threats such as the insane Dollmaker, and the secretive Court of Owls.",
+      "inCinemas": "2015-04-14T00:00:00Z",
+      "physicalRelease": "2015-04-14T00:00:00Z",
+      "digitalRelease": "2015-05-14T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/17d29149c0636c43a3a9d1d049db87c4923eb46d47bedee2769d2d4a38952d26/aGp9XDXmVM5lCKHWtgBC15S7XLr.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/aGp9XDXmVM5lCKHWtgBC15S7XLr.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/a4bceca57481ac1b7a6c074c61ac43ffad31ef4721cf8a6853df92be9369dcf7/g2XhZJhFiHcczWcXEEldItG53gd.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/g2XhZJhFiHcczWcXEEldItG53gd.jpg"
+        }
+      ],
+      "website": "http://www.warnerbros.com/batman-vs-robin",
+      "remotePoster": "https://image.tmdb.org/t/p/original/aGp9XDXmVM5lCKHWtgBC15S7XLr.jpg",
+      "year": 2015,
+      "hasFile": false,
+      "youTubeTrailerId": "RzM835MUcaU",
+      "studio": "DC Entertainment",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 72,
+      "cleanTitle": "batmanvsrobin",
+      "imdbId": "tt4324274",
+      "tmdbId": 321528,
+      "titleSlug": "321528",
+      "folder": "Batman vs. Robin (2015)",
+      "certification": "PG-13",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 21746,
+          "value": 7.1,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 685,
+          "value": 7.3,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 100,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Son of Batman Collection",
+        "tmdbId": 334996,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman Forever",
+      "originalTitle": "Batman Forever",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 3",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 3 - Batman Forever",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman 3",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman Para Sempre",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 18,
+            "name": "Portuguese"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman forever",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Batman must battle a disfigured district attorney and a disgruntled former employee with help from an amorous psychologist and a young circus acrobat.",
+      "inCinemas": "1995-06-16T00:00:00Z",
+      "physicalRelease": "1996-01-01T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/30e06645357cdc73c2e15b7b113a40656bebd28b8d100b67daba304e74def2fe/mzzNBVwTiiY94xAXDMWJpNPW2US.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/mzzNBVwTiiY94xAXDMWJpNPW2US.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/f06b84e950bb92bd75ed93cebae1e9d7adfadff5b66d3f80ab27eced67c70202/snlu32RmjldF9b068UURJg8sQtn.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/snlu32RmjldF9b068UURJg8sQtn.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/mzzNBVwTiiY94xAXDMWJpNPW2US.jpg",
+      "year": 1995,
+      "hasFile": false,
+      "youTubeTrailerId": "b_KllgySsPo",
+      "studio": "DC Comics",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 121,
+      "cleanTitle": "batmanforever",
+      "imdbId": "tt0112462",
+      "tmdbId": 414,
+      "titleSlug": "414",
+      "folder": "Batman Forever (1995)",
+      "certification": "PG-13",
+      "genres": [
+        "Action",
+        "Crime",
+        "Fantasy"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "tmdb": {
+          "votes": 4052,
+          "value": 5.4,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman Collection",
+        "tmdbId": 120794,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman: Death in the Family",
+      "originalTitle": "Batman: Death in the Family",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "DC Showcase Shorts: Batman: Death in the Family",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "DC展台：蝙蝠侠：家庭之死",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "DC Showcase: Batman: Death in the Family",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman death in family",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Tragedy strikes the Batman's life again when Robin Jason Todd tracks down his birth mother only to run afoul of the Joker. An adaptation of the 1988 comic book storyline of the same name.",
+      "physicalRelease": "2020-10-13T00:00:00Z",
+      "digitalRelease": "2020-10-13T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/c08a34026175184b966dec956e1c647de6e59106cdc621a4504859fd1be40a72/k8Q9ulyRE8fkvZMkAM9LPYMKctb.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/k8Q9ulyRE8fkvZMkAM9LPYMKctb.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/6a8333f16b15d2467f9e2364705488d3b5f99e38300c2a3afe7922416f4c4206/kU7ZiyeUwcpTkYj3UcxSqGdZmxY.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/kU7ZiyeUwcpTkYj3UcxSqGdZmxY.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/k8Q9ulyRE8fkvZMkAM9LPYMKctb.jpg",
+      "year": 2020,
+      "hasFile": false,
+      "youTubeTrailerId": "TGjF_Gal67w",
+      "studio": "Warner Bros. Animation",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 31,
+      "cleanTitle": "batmandeathinfamily",
+      "imdbId": "tt12794046",
+      "tmdbId": 618353,
+      "titleSlug": "618353",
+      "folder": "Batman Death in the Family (2020)",
+      "certification": "R",
+      "genres": [
+        "Animation",
+        "Action"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 2641,
+          "value": 5.6,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 300,
+          "value": 7.2,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 75,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman: Under the Red Hood Collection",
+        "tmdbId": 846090,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman v Superman: Dawn of Justice",
+      "originalTitle": "Batman v Superman: Dawn of Justice",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman v Superman: Dawn of Justice - Ultimate Edition",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman v Superman. El Amanecer de la Justicia (Ultimate Edition)",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 3,
+            "name": "Spanish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman versus Superman: Dawn of Justice",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Man Of Steel 2 - Batman v Superman l'Aube de la Justice",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman versus Superman - Dawn of Justice",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "배트맨 대 슈퍼맨: 저스티스의 시작",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Betmen vs Supermen: Adolat boshlanish davrida",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman kontra Superman: Świt sprawiedliwości",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 12,
+            "name": "Polish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman vs Superman - Dawn of Justice",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman vs. Superman - Dawn of Justice",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Superman 7 - Batman v Superman - Úsvit spravedlnosti (2016)",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman vs Superman: A Origem da Justiça",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Man of Steel 2 - Batman v Superman Dawn of Justice",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman vs Superman El amanecer de la Justicia",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 3,
+            "name": "Spanish"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman v superman dawn justice",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
+      "inCinemas": "2016-03-23T00:00:00Z",
+      "physicalRelease": "2016-06-24T00:00:00Z",
+      "digitalRelease": "2016-06-29T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/7a7efb83bb90229db3446a4529824eb0cee4339c329c3520e6e8dc88d8dfca0a/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/5UsK3grJvtQrtzEgqNlDljJW96w.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/044e490f80d8e8c54fd75392b6f399b8ef527eb80a8c22dcca43725860b8f680/mX3WOJPBzzl4kj4xU5lL7qfD6C3.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/mX3WOJPBzzl4kj4xU5lL7qfD6C3.jpg"
+        }
+      ],
+      "website": "http://www.batmanvsupermandawnofjustice.com/",
+      "remotePoster": "https://image.tmdb.org/t/p/original/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+      "year": 2016,
+      "hasFile": false,
+      "youTubeTrailerId": "NhWg7AQLI_8",
+      "studio": "Warner Bros. Pictures",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 152,
+      "cleanTitle": "batmanvsupermandawnjustice",
+      "imdbId": "tt2975590",
+      "tmdbId": 209112,
+      "titleSlug": "209112",
+      "folder": "Batman v Superman Dawn of Justice (2016)",
+      "certification": "PG-13",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 673683,
+          "value": 6.4,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 15455,
+          "value": 5.9,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 44,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 29,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Man of Steel Collection",
+        "tmdbId": 209131,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman and Harley Quinn",
+      "originalTitle": "Batman and Harley Quinn",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman y Harley Quinn",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 3,
+            "name": "Spanish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman and Harley Quinn",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman harley quinn",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Batman and Nightwing are forced to team with the Joker's sometimes-girlfriend Harley Quinn to stop a global threat brought about by Poison Ivy and Jason Woodrue, the Floronic Man.",
+      "inCinemas": "2017-08-14T00:00:00Z",
+      "physicalRelease": "2017-08-28T00:00:00Z",
+      "digitalRelease": "2017-08-15T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/80786b4d5f4395328b11634d8b907bcef6ad0bac24785d277e2fc126ccfaf776/zrqIPpbqCgrs1rS0ltxNicJcuse.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/zrqIPpbqCgrs1rS0ltxNicJcuse.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/9b388abf86c31df621fcb4972f2556f2dffc7bedb5ecce033cdfddd456eedc1e/2JVnUtyUKbQm165cXUF9r5iVPDo.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/2JVnUtyUKbQm165cXUF9r5iVPDo.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/zrqIPpbqCgrs1rS0ltxNicJcuse.jpg",
+      "year": 2017,
+      "hasFile": false,
+      "youTubeTrailerId": "Qi3yJTc8Gjk",
+      "studio": "DC Comics",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 74,
+      "cleanTitle": "batmanharleyquinn",
+      "imdbId": "tt6556890",
+      "tmdbId": 408648,
+      "titleSlug": "408648",
+      "folder": "Batman and Harley Quinn (2017)",
+      "certification": "PG-13",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Animation"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 12825,
+          "value": 5.9,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 463,
+          "value": 6.2,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 45,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman (DC Universe Animated) Collection",
+        "tmdbId": 421904,
+        "images": []
+      }
+    },
+    {
+      "title": "Son of Batman",
+      "originalTitle": "Son of Batman",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Syn Batmana",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 12,
+            "name": "Polish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "O Filho do Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Сын Бэтмена",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 11,
+            "name": "Russian"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: Son of Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 7,
+            "name": "Dutch"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: El Hijo de Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "El Hijo de Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman - Le fils de Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "son batman",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Batman learns he has a violent, unruly pre-teen son, secretly raised by the terrorist group known as The League of Assassins.",
+      "inCinemas": "2014-05-13T00:00:00Z",
+      "physicalRelease": "2014-04-22T00:00:00Z",
+      "digitalRelease": "2014-04-22T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/5629fd1ebdb3e9852e15d5c4ce20a364062f6ae11de45cae0959e58a094fcb77/yHx8OLSKc3VtIBB5lIe90c0fHOX.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/yHx8OLSKc3VtIBB5lIe90c0fHOX.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/7585c90b84aef53b95dc52bc2fb986d9e0ceb72dd2597c0ef7add8bef38024e0/jYqOnJDPI7QD9cGbE6CwDTp1tID.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/jYqOnJDPI7QD9cGbE6CwDTp1tID.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/yHx8OLSKc3VtIBB5lIe90c0fHOX.jpg",
+      "year": 2014,
+      "hasFile": false,
+      "youTubeTrailerId": "bis7XOu0Xms",
+      "studio": "DC Comics",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 74,
+      "cleanTitle": "sonbatman",
+      "imdbId": "tt3139072",
+      "tmdbId": 251519,
+      "titleSlug": "251519",
+      "folder": "Son of Batman (2014)",
+      "certification": "PG-13",
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 26797,
+          "value": 6.8,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 793,
+          "value": 7.1,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 64,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Son of Batman Collection",
+        "tmdbId": 334996,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman",
+      "originalTitle": "Batman",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: The Movie",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman - Lepakkomies",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 16,
+            "name": "Finnish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman - O Homem Morcego",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman, o Invencível",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 18,
+            "name": "Portuguese"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 18,
+            "name": "Portuguese"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman - Le film",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman : Le Film",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 2,
+            "name": "French"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman hält die Welt in Atem",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "The Dynamic Duo faces four super-villains who plan to hold the world for ransom with the help of a secret invention that instantly dehydrates people.",
+      "inCinemas": "1966-07-30T00:00:00Z",
+      "physicalRelease": "2005-10-05T00:00:00Z",
+      "digitalRelease": "2003-05-21T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/81729b867f6fa8cd1721b221ad06882de1d1e4a491e7e639a6a6cc5343e3184f/zzoPxWHnPa0eyfkMLgwbNvdEcVF.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/zzoPxWHnPa0eyfkMLgwbNvdEcVF.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/3ebc885e00099e5fcdf6eaec287949151cb5c3bbd48216b92581e3e0a0454419/78WYLdsidjafX5cll2G6fWCR1xB.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/78WYLdsidjafX5cll2G6fWCR1xB.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/zzoPxWHnPa0eyfkMLgwbNvdEcVF.jpg",
+      "year": 1966,
+      "hasFile": false,
+      "youTubeTrailerId": "vvY5MgOgDUw",
+      "studio": "DC Comics",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 105,
+      "cleanTitle": "batman",
+      "imdbId": "tt0060153",
+      "tmdbId": 2661,
+      "titleSlug": "2661",
+      "folder": "Batman (1966)",
+      "certification": "PG",
+      "genres": [
+        "Family",
+        "Adventure",
+        "Comedy"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 31282,
+          "value": 6.5,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 604,
+          "value": 6.3,
+          "type": "user"
+        },
+        "metacritic": {
+          "votes": 0,
+          "value": 71,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 79,
+          "type": "user"
+        }
+      }
+    },
+    {
+      "title": "Batman: The Long Halloween, Part Two",
+      "originalTitle": "Batman: The Long Halloween, Part Two",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: O Longo Dia das Bruxas - Parte 2",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman the Long Halloween Part 2",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "แบทแมน ฮาโลวีนที่ยาวนาน ตอนที่ 2",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 28,
+            "name": "Thai"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman long halloween part two",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "As Gotham City's young vigilante, the Batman, struggles to pursue a brutal serial killer, district attorney Harvey Dent gets caught in a feud involving the criminal family of the Falcones.",
+      "physicalRelease": "2021-07-27T00:00:00Z",
+      "digitalRelease": "2021-07-26T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/4d8039f082bdc9af50e62f7267fd88a8d9bdbc1e12bc92b98e071b97715406ab/5X1n5q08mZ7NpNpxehMFODxfNYq.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/5X1n5q08mZ7NpNpxehMFODxfNYq.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/57b67209abdc2f386300439be1d626c36b319300309443dae34daa375a3a2232/j14Z0pP7tpuHZlVBSuUL7tq2SGb.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/j14Z0pP7tpuHZlVBSuUL7tq2SGb.jpg"
+        }
+      ],
+      "website": "https://www.warnerbros.com/movies/batman-long-halloween-part-2",
+      "remotePoster": "https://image.tmdb.org/t/p/original/5X1n5q08mZ7NpNpxehMFODxfNYq.jpg",
+      "year": 2021,
+      "hasFile": false,
+      "youTubeTrailerId": "u0jEvGBwK44",
+      "studio": "DC Entertainment",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 87,
+      "cleanTitle": "batmanlonghalloweenparttwo",
+      "imdbId": "tt14402926",
+      "tmdbId": 736074,
+      "titleSlug": "736074",
+      "folder": "Batman The Long Halloween, Part Two (2021)",
+      "certification": "R",
+      "genres": [
+        "Animation",
+        "Mystery",
+        "Action"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 9804,
+          "value": 7.2,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 252,
+          "value": 7.7,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 100,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman: The Long Halloween Collection",
+        "tmdbId": 785583,
+        "images": []
+      }
+    },
+    {
+      "title": "Scooby-Doo Meets Batman",
+      "originalTitle": "Scooby-Doo Meets Batman",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Scooby-Doo trifft Batman",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 4,
+            "name": "German"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "scooby doo meets batman",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Scooby-Doo Meets Batman is a video compilation from Warner Bros. Home Entertainment. It consists of two episodes from Hanna-Barbera's The New Scooby-Doo Movies, \"The Dynamic Scooby Doo Affair\" and \"The Caped Crusader Caper\", where Scooby-Doo and the gang team up with Batman and Robin to capture Joker and the Penguin.",
+      "physicalRelease": "2002-08-20T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/12dccf87bba22020c54fd10dcf82eb9ea04f8c0cfe5e004fa44c242686f82d3a/uI9enNoQsqseLXQK60YbscDr5L6.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/uI9enNoQsqseLXQK60YbscDr5L6.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/uI9enNoQsqseLXQK60YbscDr5L6.jpg",
+      "year": 2002,
+      "hasFile": false,
+      "youTubeTrailerId": "",
+      "studio": "Hanna-Barbera Productions",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 78,
+      "cleanTitle": "scoobydoomeetsbatman",
+      "imdbId": "tt13370102",
+      "tmdbId": 287757,
+      "titleSlug": "287757",
+      "folder": "Scooby-Doo Meets Batman (2002)",
+      "certification": "NR",
+      "genres": [
+        "Family",
+        "Animation",
+        "Comedy"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 139,
+          "value": 7.1,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 84,
+          "value": 8.1,
+          "type": "user"
+        }
+      }
+    },
+    {
+      "title": "Batman: Bad Blood",
+      "originalTitle": "Batman: Bad Blood",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "蝙蝠侠：血脉恩仇",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman bad blood",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Bruce Wayne is missing. Alfred covers for him while Nightwing and Robin patrol Gotham City in his stead and a new player, Batwoman, investigates Batman's disappearance.",
+      "inCinemas": "2016-03-22T00:00:00Z",
+      "physicalRelease": "2016-02-02T00:00:00Z",
+      "digitalRelease": "2016-01-19T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/48e1795c000bedb74e17537058ac7cf25e0124315b1af1f2878744c66c4126c4/1UmPJWfaivtNjsScJqcsbsQRGNY.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/1UmPJWfaivtNjsScJqcsbsQRGNY.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/94fe1c23d4a762d8447f0e124a03700a0974e475db2e2f3c294b73f73601611a/nwfpBjtMNFwrGjW2o9HBhMEYCpM.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/nwfpBjtMNFwrGjW2o9HBhMEYCpM.jpg"
+        }
+      ],
+      "website": "",
+      "remotePoster": "https://image.tmdb.org/t/p/original/1UmPJWfaivtNjsScJqcsbsQRGNY.jpg",
+      "year": 2016,
+      "hasFile": false,
+      "youTubeTrailerId": "G-0bQpHlpdQ",
+      "studio": "DC Comics",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 72,
+      "cleanTitle": "batmanbadblood",
+      "imdbId": "tt4870838",
+      "tmdbId": 366924,
+      "titleSlug": "366924",
+      "folder": "Batman Bad Blood (2016)",
+      "certification": "PG-13",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Animation"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 22558,
+          "value": 6.8,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 602,
+          "value": 7.2,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 100,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Son of Batman Collection",
+        "tmdbId": 334996,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman: The Long Halloween, Part One",
+      "originalTitle": "Batman: The Long Halloween, Part One",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "แบทแมน ฮาโลวีนที่ยาวนาน ตอนที่ 1",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 28,
+            "name": "Thai"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman long halloween part one",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Following a brutal series of murders taking place on Halloween, Thanksgiving, and Christmas, Gotham City's young vigilante known as the Batman sets out to pursue the mysterious serial killer alongside police officer James Gordon and district attorney Harvey Dent.",
+      "physicalRelease": "2021-06-21T00:00:00Z",
+      "digitalRelease": "2021-06-22T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/f659bd2aeec53e73ac4ad3d3f7dde6026522032059e40dd2e1b9d760ed5f297e/sR7gppb0YGjwLvE6Vnj6wYv5MnW.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/sR7gppb0YGjwLvE6Vnj6wYv5MnW.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/0e7416987daf43c6ab120989f3d5043b9dad25a10de5761edb1a81264ee0c6dc/uS9apevOgs2fuYghf9szOoK1u63.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/uS9apevOgs2fuYghf9szOoK1u63.jpg"
+        }
+      ],
+      "website": "https://www.warnerbros.com/movies/batman-long-halloween-part-1",
+      "remotePoster": "https://image.tmdb.org/t/p/original/sR7gppb0YGjwLvE6Vnj6wYv5MnW.jpg",
+      "year": 2021,
+      "hasFile": false,
+      "youTubeTrailerId": "8qodAY3S7Dg",
+      "studio": "DC Entertainment",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 85,
+      "cleanTitle": "batmanlonghalloweenpartone",
+      "imdbId": "tt14324650",
+      "tmdbId": 736073,
+      "titleSlug": "736073",
+      "folder": "Batman The Long Halloween, Part One (2021)",
+      "certification": "PG-13",
+      "genres": [
+        "Animation",
+        "Mystery",
+        "Action"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 12386,
+          "value": 7.3,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 303,
+          "value": 7.8,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 100,
+          "type": "user"
+        }
+      },
+      "collection": {
+        "name": "Batman: The Long Halloween Collection",
+        "tmdbId": 785583,
+        "images": []
+      }
+    },
+    {
+      "title": "Batman: Soul of the Dragon",
+      "originalTitle": "Batman: Soul of the Dragon",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: Alma de Dragón",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 3,
+            "name": "Spanish"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: Alma de Dragón",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "蝙蝠侠：龙之魂",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: Alma do Dragão",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: Soul of the Dragon",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman soul dragon",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "Bruce Wayne faces a deadly menace from his past, with the help of three former classmates: world-renowned martial artists Richard Dragon, Ben Turner and Lady Shiva.",
+      "physicalRelease": "2021-01-26T00:00:00Z",
+      "digitalRelease": "2021-01-12T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/5e4e21b5b8074e37f9357cc991d5615740b81577ebfe506f8dd67cf60e617d5c/uDhnTtSxU5a8DtZdbbin3aZmkmU.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/uDhnTtSxU5a8DtZdbbin3aZmkmU.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/0e9d861bd925fe5dfe1029997a00fc14bfd7a3aa96d5e711efdd6036894f85c0/jvRewPpawHAfBW38EzHoFdTVEez.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/jvRewPpawHAfBW38EzHoFdTVEez.jpg"
+        }
+      ],
+      "website": "https://www.warnerbros.com/movies/batman-soul-dragon",
+      "remotePoster": "https://image.tmdb.org/t/p/original/uDhnTtSxU5a8DtZdbbin3aZmkmU.jpg",
+      "year": 2021,
+      "hasFile": false,
+      "youTubeTrailerId": "eHCAgSuLog4",
+      "studio": "Warner Bros. Animation",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 83,
+      "cleanTitle": "batmansouldragon",
+      "imdbId": "tt12885852",
+      "tmdbId": 732450,
+      "titleSlug": "732450",
+      "folder": "Batman Soul of the Dragon (2021)",
+      "certification": "R",
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 4754,
+          "value": 6.1,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 199,
+          "value": 7,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 93,
+          "type": "user"
+        }
+      }
+    },
+    {
+      "title": "Batman: The Killing Joke",
+      "originalTitle": "Batman: The Killing Joke",
+      "alternateTitles": [
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "Batman: La broma mortal",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        },
+        {
+          "sourceType": "tmdb",
+          "movieId": 0,
+          "title": "蝙蝠俠: 致命玩笑",
+          "sourceId": 0,
+          "votes": 0,
+          "voteCount": 0,
+          "language": {
+            "id": 1,
+            "name": "English"
+          }
+        }
+      ],
+      "secondaryYearSourceId": 0,
+      "sortTitle": "batman killing joke",
+      "sizeOnDisk": 0,
+      "status": "released",
+      "overview": "As Batman hunts for the escaped Joker, the Clown Prince of Crime attacks the Gordon family to prove a diabolical point mirroring his own fall into madness.",
+      "inCinemas": "2016-07-24T00:00:00Z",
+      "physicalRelease": "2016-08-03T00:00:00Z",
+      "digitalRelease": "2016-07-26T00:00:00Z",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/48e2c2ece20c661c748b1c6063212b7df1385a259ae4580f9aefecefa42b7045/nxncAAL1FUKtQWs4uhs5jf1MVut.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/nxncAAL1FUKtQWs4uhs5jf1MVut.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/fcfcb6ab55ff88a31afc8dc54a6a7e353462bf48dd34b144b37a1ae3c8b9fd45/wNyhtxSazhYVSG1So8zgGTqVFVo.jpg",
+          "remoteUrl": "https://image.tmdb.org/t/p/original/wNyhtxSazhYVSG1So8zgGTqVFVo.jpg"
+        }
+      ],
+      "website": "https://www.warnerbros.com/batman-killing-joke",
+      "remotePoster": "https://image.tmdb.org/t/p/original/nxncAAL1FUKtQWs4uhs5jf1MVut.jpg",
+      "year": 2016,
+      "hasFile": false,
+      "youTubeTrailerId": "ZQTqu1_iQkw",
+      "studio": "Warner Bros. Animation",
+      "qualityProfileId": 0,
+      "monitored": false,
+      "minimumAvailability": "tba",
+      "isAvailable": true,
+      "folderName": "",
+      "runtime": 72,
+      "cleanTitle": "batmankillingjoke",
+      "imdbId": "tt4853102",
+      "tmdbId": 382322,
+      "titleSlug": "382322",
+      "folder": "Batman The Killing Joke (2016)",
+      "certification": "R",
+      "genres": [
+        "Action",
+        "Animation",
+        "Crime"
+      ],
+      "tags": [],
+      "added": "0001-01-01T05:00:00Z",
+      "ratings": {
+        "imdb": {
+          "votes": 54018,
+          "value": 6.4,
+          "type": "user"
+        },
+        "tmdb": {
+          "votes": 1388,
+          "value": 6.6,
+          "type": "user"
+        },
+        "rottenTomatoes": {
+          "votes": 0,
+          "value": 39,
+          "type": "user"
+        }
+      }
+    }
+  ],
+  "sonarr": [
+    {
+      "title": "The Blacklist",
+      "sortTitle": "blacklist",
+      "status": "ended",
+      "ended": true,
+      "overview": "Together with young children, host Tom Waes, performs exciting activities and stunts.",
+      "network": "één",
+      "airTime": "00:00",
+      "images": [
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/5e7f6e58fa09a08c3e75648b3528bbbe4eb7ffddf5981bf282a6fa243e2b02d9/61868a5b09422.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/394358/posters/61868a5b09422.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/abd0d7caf4fd00eb557ce97836b7b92617b928cac3acf6a0317ce6047c06fe37/5ff10ea4b62d1.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/series/394358/backgrounds/5ff10ea4b62d1.jpg"
+        }
+      ],
+      "remotePoster": "https://artworks.thetvdb.com/banners/v4/series/394358/posters/61868a5b09422.jpg",
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 2,
+          "monitored": true
+        }
+      ],
+      "year": 2014,
+      "qualityProfileId": 0,
+      "languageProfileId": 0,
+      "seasonFolder": false,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 55,
+      "tvdbId": 394358,
+      "tvRageId": 0,
+      "tvMazeId": 53432,
+      "firstAired": "2014-11-03T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "theblacklist",
+      "titleSlug": "the-blacklist",
+      "folder": "The Blacklist",
+      "genres": [
+        "Family"
+      ],
+      "tags": [],
+      "added": "0001-01-01T00:00:00Z",
+      "ratings": {
+        "votes": 0,
+        "value": 0.0
+      },
+      "statistics": {
+        "seasonCount": 2,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      }
+    },
+    {
+      "title": "The Blacklist",
+      "sortTitle": "blacklist",
+      "status": "continuing",
+      "ended": false,
+      "overview": "Raymond “Red” Reddington, one of the FBI’s most wanted fugitives, surrenders in person at FBI Headquarters in Washington, D.C. He claims that he and the FBI have the same interests—bringing down dangerous criminals and terrorists. In the last two decades, he’s made a list of criminals and terrorists that matter the most but the FBI cannot find because it does not know they exist. Reddington calls this “The Blacklist.” Reddington will co-operate with the FBI, but insists that he will speak only to Elizabeth Keen, a rookie profiler.",
+      "network": "NBC",
+      "airTime": "20:00",
+      "images": [
+        {
+          "coverType": "banner",
+          "url": "/MediaCover/19/banner.jpg?lastWrite=637100166886806551",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/266189-g20.jpg"
+        },
+        {
+          "coverType": "poster",
+          "url": "/MediaCover/19/poster.jpg?lastWrite=637100166888118700",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/posters/266189-1.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCover/19/fanart.jpg?lastWrite=637100166883481012",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/266189-1.jpg"
+        }
+      ],
+      "remotePoster": "https://artworks.thetvdb.com/banners/posters/266189-1.jpg",
+      "seasons": [
+        {
+          "seasonNumber": 0,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 1,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 2,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 3,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 4,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 5,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 6,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 7,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 8,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 9,
+          "monitored": true
+        }
+      ],
+      "year": 2013,
+      "path": "E:\\TV Shows\\The Blacklist",
+      "qualityProfileId": 7,
+      "languageProfileId": 1,
+      "seasonFolder": true,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 43,
+      "tvdbId": 266189,
+      "tvRageId": 35048,
+      "tvMazeId": 69,
+      "firstAired": "2013-09-23T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "theblacklist",
+      "imdbId": "tt2741602",
+      "titleSlug": "the-blacklist",
+      "folder": "The Blacklist",
+      "certification": "TV-14",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "tags": [],
+      "added": "2016-01-11T01:25:25.1595311Z",
+      "ratings": {
+        "votes": 5359,
+        "value": 8.7
+      },
+      "statistics": {
+        "seasonCount": 9,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      },
+      "id": 19
+    },
+    {
+      "title": "The Blacklist: Redemption",
+      "sortTitle": "blacklist redemption",
+      "status": "ended",
+      "ended": true,
+      "overview": "Undercover operative Tom Keen joins forces with Susan \"Scottie\" Hargrave, the brilliant and cunning chief of Grey Matters, a covert mercenary organization that solves problems governments don’t dare touch. While on the hunt for Liz’s attacker, Tom secretly discovered that Scottie is actually his biological mother. Now, as they team up to employ their unique skills and resources in a dangerous world of deadly criminals, Tom begins his own covert mission to find out more about his shadowy past.",
+      "network": "NBC",
+      "airTime": "22:00",
+      "images": [
+        {
+          "coverType": "banner",
+          "url": "/MediaCoverProxy/c213bb7da49cb213a9a3c19cdb24df8aab30df7f35b3fc0195ab8c8a4aba93a3/311903-g4.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/311903-g4.jpg"
+        },
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/2199bc50ee0f0d5efd744d3c47659695fd6c4cb6304e2632640615df7429b311/311903-5.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/posters/311903-5.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/9f44c5e343d7946fb100dbfe611eff121d0c08c94a432bfa33aa57e880a99009/311903-6.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/311903-6.jpg"
+        }
+      ],
+      "remotePoster": "https://artworks.thetvdb.com/banners/posters/311903-5.jpg",
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "monitored": true
+        }
+      ],
+      "year": 2017,
+      "qualityProfileId": 0,
+      "languageProfileId": 0,
+      "seasonFolder": false,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 45,
+      "tvdbId": 311903,
+      "tvRageId": 0,
+      "tvMazeId": 17162,
+      "firstAired": "2017-02-23T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "theblacklistredemption",
+      "imdbId": "tt5592230",
+      "titleSlug": "the-blacklist-redemption",
+      "folder": "The Blacklist - Redemption",
+      "certification": "TV-14",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "tags": [],
+      "added": "0001-01-01T00:00:00Z",
+      "ratings": {
+        "votes": 332,
+        "value": 7.2
+      },
+      "statistics": {
+        "seasonCount": 1,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      }
+    },
+    {
+      "title": "Blacklist (2019)",
+      "sortTitle": "blacklist 2019",
+      "status": "ended",
+      "ended": true,
+      "overview": "After his sister goes missing, a young man is asked to join \"Blacklist,\" a group of students who work together to stop the crimes and injustices in their school.",
+      "network": "GMM One",
+      "airTime": "23:30",
+      "images": [
+        {
+          "coverType": "banner",
+          "url": "/MediaCoverProxy/8cb139c097e94e04531ef5f2be43f132a155e8b0a7c40286f34214a8f293d8d3/5c3de8e1c4da0.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/5c3de8e1c4da0.jpg"
+        },
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/86de5ba3a0bd9d4bae1d339bb9a80e08a527debe59bbb2d006b6d12611986782/5c3de8852c922.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/posters/5c3de8852c922.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/d777152fa9dac9667a3e60ec6549053dd8bd02ef04a58f322a4a70e7e1295a06/61db927e44006.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/358213/backgrounds/61db927e44006.jpg"
+        }
+      ],
+      "remotePoster": "https://artworks.thetvdb.com/banners/posters/5c3de8852c922.jpg",
+      "seasons": [
+        {
+          "seasonNumber": 0,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 1,
+          "monitored": true
+        }
+      ],
+      "year": 2019,
+      "qualityProfileId": 0,
+      "languageProfileId": 0,
+      "seasonFolder": false,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 45,
+      "tvdbId": 358213,
+      "tvRageId": 0,
+      "tvMazeId": 44220,
+      "firstAired": "2019-10-13T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "blacklist2019",
+      "imdbId": "tt9892494",
+      "titleSlug": "blacklist-2019",
+      "folder": "Blacklist (2019)",
+      "certification": "TV-PG",
+      "genres": [
+        "Action",
+        "Drama",
+        "Romance"
+      ],
+      "tags": [],
+      "added": "0001-01-01T00:00:00Z",
+      "ratings": {
+        "votes": 0,
+        "value": 0.0
+      },
+      "statistics": {
+        "seasonCount": 1,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      }
+    },
+    {
+      "title": "Index-The Vatican Black List",
+      "sortTitle": "index vatican black list",
+      "status": "ended",
+      "ended": true,
+      "overview": "After the invention of printing and the spread of the Reformation, the Vatican tried to regain sovereignty over the interpretation of knowledge. In the 16th century the Index Congregation was founded, which was supposed to check all books for heretical ideas. It created the Index librorum prohibitorum, the list of forbidden books. The journalist Wolf von Lojewski and the church historian Hubert Wolf also devote themselves to the European intellectual history of the 19th and 20th centuries.",
+      "network": "ZDF",
+      "images": [],
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "monitored": true
+        }
+      ],
+      "year": 2009,
+      "qualityProfileId": 0,
+      "languageProfileId": 0,
+      "seasonFolder": false,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 45,
+      "tvdbId": 367452,
+      "tvRageId": 0,
+      "tvMazeId": 0,
+      "firstAired": "2009-04-07T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "indexvaticanblacklist",
+      "imdbId": "tt1400519",
+      "titleSlug": "index-the-vatican-black-list",
+      "folder": "Index-The Vatican Black List",
+      "genres": [
+        "Documentary"
+      ],
+      "tags": [],
+      "added": "0001-01-01T00:00:00Z",
+      "ratings": {
+        "votes": 0,
+        "value": 0.0
+      },
+      "statistics": {
+        "seasonCount": 1,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      }
+    },
+    {
+      "title": "Boys from the Blackstuff",
+      "sortTitle": "boys from blackstuff",
+      "status": "ended",
+      "ended": true,
+      "overview": "Alan Bleasdale's five-part series relates the further experiences of unemployed Liverpudlian tarmac layers Dixie, Chrissie, Loggo and Yosser, and their revered older friend, retired longshoreman and union leader, George Malone. As they struggle to make ends meet in a depressed economy, and to hold together their financially battered families, they are harrassed by the petty bureaucrats of the DHSS. But the lumbering investigational juggernaut is, both comically and tragically, guided by drivers with only a provisional license.",
+      "network": "BBC Two",
+      "images": [
+        {
+          "coverType": "banner",
+          "url": "/MediaCoverProxy/fe3d345f8df6c5765cee963ff059ac0943c491863e0798f58b6c67a1ae303ae9/78748-g.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/78748-g.jpg"
+        },
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/f7c51a3f9e8ffef5e8781f8cf1f718a885e645c56a4a01e351b22968b7be80f1/78748-1.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/posters/78748-1.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/ac938f78924c15bbb3e0260971ab79613bab465dd6de85dd251339614e08d8e4/602728aedd804.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/series/78748/backgrounds/602728aedd804.jpg"
+        }
+      ],
+      "remotePoster": "https://artworks.thetvdb.com/banners/posters/78748-1.jpg",
+      "seasons": [
+        {
+          "seasonNumber": 0,
+          "monitored": false
+        },
+        {
+          "seasonNumber": 1,
+          "monitored": true
+        }
+      ],
+      "year": 1982,
+      "qualityProfileId": 0,
+      "languageProfileId": 0,
+      "seasonFolder": false,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 70,
+      "tvdbId": 78748,
+      "tvRageId": 0,
+      "tvMazeId": 16772,
+      "firstAired": "1982-10-10T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "boysfromblackstuff",
+      "imdbId": "tt0083689",
+      "titleSlug": "boys-from-the-blackstuff",
+      "folder": "Boys from the Blackstuff",
+      "genres": [
+        "Drama"
+      ],
+      "tags": [],
+      "added": "0001-01-01T00:00:00Z",
+      "ratings": {
+        "votes": 60,
+        "value": 9.5
+      },
+      "statistics": {
+        "seasonCount": 1,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      }
+    },
+    {
+      "title": "The Octopus",
+      "sortTitle": "octopus",
+      "status": "ended",
+      "ended": true,
+      "overview": "First broadcast in Italy in 1984, The Octopus (La Piovra) is an international blockbuster, running 18 years and producing nine follow-up series. The title of this classic Mafia thriller says it all, evoking the image of a secret criminal culture extending its tentacles into every layer of society.",
+      "images": [
+        {
+          "coverType": "banner",
+          "url": "/MediaCoverProxy/1737fbe11c9b65963e0bc02274ce0bc1bbc302bfdd11597721c4284f44609d31/82709-g4.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/82709-g4.jpg"
+        },
+        {
+          "coverType": "poster",
+          "url": "/MediaCoverProxy/79ebc465fba72eff36c896dd41bc77318a68b2435415a1212ada31f127ab8661/82709-11.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/posters/82709-11.jpg"
+        },
+        {
+          "coverType": "fanart",
+          "url": "/MediaCoverProxy/6b0e64ab1faa26266e52345317c5744599a775ca68c9d2fce53940b75d0da239/82709-1.jpg",
+          "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/82709-1.jpg"
+        }
+      ],
+      "remotePoster": "https://artworks.thetvdb.com/banners/posters/82709-11.jpg",
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 2,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 3,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 4,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 5,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 6,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 7,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 8,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 9,
+          "monitored": true
+        },
+        {
+          "seasonNumber": 10,
+          "monitored": true
+        }
+      ],
+      "year": 1984,
+      "qualityProfileId": 0,
+      "languageProfileId": 0,
+      "seasonFolder": false,
+      "monitored": true,
+      "useSceneNumbering": false,
+      "runtime": 65,
+      "tvdbId": 82709,
+      "tvRageId": 27645,
+      "tvMazeId": 36535,
+      "firstAired": "1984-03-11T00:00:00Z",
+      "seriesType": "standard",
+      "cleanTitle": "theoctopus",
+      "imdbId": "tt0086779",
+      "titleSlug": "the-octopus",
+      "folder": "The Octopus",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Romance",
+        "Thriller"
+      ],
+      "tags": [],
+      "added": "0001-01-01T00:00:00Z",
+      "ratings": {
+        "votes": 111,
+        "value": 9.7
+      },
+      "statistics": {
+        "seasonCount": 10,
+        "episodeFileCount": 0,
+        "episodeCount": 0,
+        "totalEpisodeCount": 0,
+        "sizeOnDisk": 0,
+        "percentOfEpisodes": 0.0
+      }
+    }
+  ]
+}

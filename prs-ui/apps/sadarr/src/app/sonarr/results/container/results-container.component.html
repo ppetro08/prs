@@ -1,0 +1,10 @@
+<div class="no-results-found" *ngIf="showNoResultsFound">No results found</div>
+
+<cdk-virtual-scroll-viewport itemSize="459" min-buffer="918" max-buffer="1836">
+  <pip-sonarr-results-item
+    *cdkVirtualFor="let item of data"
+    [item]="item"
+    [profiles]="profiles"
+    (addClick)="addClicked($event)"
+  ></pip-sonarr-results-item>
+</cdk-virtual-scroll-viewport>

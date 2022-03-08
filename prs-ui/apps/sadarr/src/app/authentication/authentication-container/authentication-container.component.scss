@@ -1,0 +1,25 @@
+.authentication-container {
+  background-color: white;
+}
+
+.authentication-header {
+  padding: 1em 0;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 12px;
+}
+
+.authentication-body {
+  padding: 1em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.mat-form-field {
+  flex: 1;
+}

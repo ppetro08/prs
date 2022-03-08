@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "angular.ng-template",
+    "cyrilletuzi.angular-schematics",
+    "dbaeumer.vscode-eslint",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "formulahendry.auto-rename-tag",
+    "infinity1207.angular2-switcher",
+    "johnpapa.angular2",
+    "mrmlnc.vscode-scss",
+    "ms-vscode.powershell",
+    "nrwl.angular-console",
+    "orta.vscode-jest",
+    "pkief.material-icon-theme",
+    "editorconfig.editorconfig",
+    "eamodio.gitlens"
+  ]
+}

@@ -1,0 +1,14 @@
+@import 'styles/themes';
+@import 'styles/variables';
+@import 'styles/snackbar';
+@import 'styles/dialog';
+@import 'styles/material-overrides';
+
+html,
+body,
+body .mat-app-background {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}

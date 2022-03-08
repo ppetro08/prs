@@ -1,0 +1,117 @@
+<div class="detail-view">
+  <div class="detail-view-header">
+    <div class="detail-view-header-thubmnail">
+      <img [src]="seriesDetail?.remotePoster" />
+    </div>
+    <div class="detail-view-header-info">
+      <div class="detail-view-header-info-title">{{ seriesDetail?.title }}</div>
+      <div class="detail-view-header-info-additional">
+        <pip-lozenge *ngIf="seriesDetail?.rating" [lozengeSize]="'small'">
+          <mat-icon color="warn" pipLozengeIcon>favorite</mat-icon>
+          <div class="lozenge-text">{{ seriesDetail?.rating }}%</div>
+        </pip-lozenge>
+        <pip-lozenge *ngIf="seriesDetail?.profile" [lozengeSize]="'small'">
+          {{ seriesDetail?.profile }}
+        </pip-lozenge>
+        <pip-lozenge *ngIf="seriesDetail?.monitored" [lozengeSize]="'small'">
+          {{ seriesDetail?.monitored ? 'Monitored' : 'Not monitored' }}
+        </pip-lozenge>
+        <pip-lozenge *ngIf="seriesDetail?.status" [lozengeSize]="'small'">
+          {{ seriesDetail?.status }}
+        </pip-lozenge>
+        <pip-lozenge *ngIf="seriesDetail?.yearSpan" [lozengeSize]="'small'">
+          {{ seriesDetail?.yearSpan }}
+        </pip-lozenge>
+        <pip-lozenge *ngIf="seriesDetail?.network" [lozengeSize]="'small'">
+          {{ seriesDetail?.network }}
+        </pip-lozenge>
+      </div>
+      <div class="detail-view-header-info-description">
+        {{ seriesDetail?.overview }}
+      </div>
+    </div>
+  </div>
+  <div class="detail-view-seasons">
+    <mat-accordion [multi]="true" [displayMode]="'flat'">
+      <mat-expansion-panel
+        hideToggle
+        *ngFor="let season of seriesDetail?.seasons"
+        (closed)="season.expanded = false"
+        (opened)="season.expanded = true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="detail-view-seasons-title">
+              <div class="left">
+                <div class="monitored">
+                  <mat-icon>
+                    {{ season.monitored ? 'bookmark' : 'bookmark_border' }}
+                  </mat-icon>
+                </div>
+                <div class="detail-view-seasons-text">
+                  Season {{ season.seasonNumber }}
+                </div>
+              </div>
+              <div class="middle">
+                <mat-icon [class.expanded]="season.expanded">
+                  keyboard_arrow_down
+                </mat-icon>
+              </div>
+              <div class="right">
+                <div class="search">
+                  <mat-icon (click)="btnclick($event)">search</mat-icon>
+                </div>
+              </div>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="season-expansion-panel-detail">
+          <table
+            mat-table
+            [dataSource]="season.episodes"
+            class="mat-elevation-z8"
+          >
+            <ng-container matColumnDef="monitored">
+              <th mat-header-cell *matHeaderCellDef>Monitored</th>
+              <td mat-cell *matCellDef="let episode">
+                <mat-icon>
+                  {{ episode.monitored ? 'bookmark' : 'bookmark_border' }}
+                </mat-icon>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="episodeNumber">
+              <th mat-header-cell *matHeaderCellDef>#</th>
+              <td mat-cell *matCellDef="let episode">
+                {{ episode.episodeNumber }}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef>Title</th>
+              <td mat-cell *matCellDef="let episode">{{ episode.title }}</td>
+            </ng-container>
+            <ng-container matColumnDef="airDate">
+              <th mat-header-cell *matHeaderCellDef>Air Date</th>
+              <td mat-cell *matCellDef="let episode">
+                {{ episode.airDate | date: 'mediumDate' }}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef>Status</th>
+              <td mat-cell *matCellDef="let episode">{{ episode.status }}</td>
+            </ng-container>
+            <ng-container matColumnDef="search">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let episode">
+                <mat-icon>search</mat-icon>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+@import '../../../../styles/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height:100%;
+}
+
+.cdk-virtual-scroll-viewport {
+  height: 100%;
+}
+
+.no-results-found {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  background-color: $result-item-background-color;
+  border-radius: 4px;
+}

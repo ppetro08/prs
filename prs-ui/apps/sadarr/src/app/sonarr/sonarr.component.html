@@ -1,0 +1,22 @@
+<h1>Tv Shows</h1>
+
+<form [formGroup]="form">
+  <mat-form-field floatLabel="always" appearance="outline">
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      placeholder="Search for a tv show"
+      formControlName="search"
+      class="sonarr-search"
+    />
+  </mat-form-field>
+</form>
+<pip-loading-overlay [show]="searchLoading$ | async">
+  <pip-sonarr-results-container
+    [data]="data$ | async"
+    [profiles]="profiles$ | async"
+    [showNoResultsFound]="showNoResultsFound$ | async"
+    (addClick)="addClicked($event)"
+  >
+  </pip-sonarr-results-container>
+</pip-loading-overlay>

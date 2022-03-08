@@ -1,0 +1,5 @@
+<mat-select [value]="value" (selectionChange)="handleMatSelectChange($event)">
+  <mat-option *ngFor="let profile of profiles" [value]="profile.id">
+    {{ profile.name }}
+  </mat-option>
+</mat-select>

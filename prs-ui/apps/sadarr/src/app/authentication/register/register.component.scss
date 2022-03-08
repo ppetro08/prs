@@ -1,0 +1,25 @@
+.register-form {
+  margin: 2em auto 0;
+  width: 320px;
+}
+
+.mat-icon {
+  color: #32cd32;
+  transform: scale(2);
+  transform-origin: center top;
+  margin: 0.25em 0 1em;
+  align-self: center;
+}
+
+h2,
+p {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.api-error {
+  margin-bottom: 1em;
+}

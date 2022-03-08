@@ -1,0 +1,74 @@
+@import '../../../../styles/variables';
+
+.detail-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-view-header {
+  padding: 2em;
+  display: flex;
+  .detail-view-header-thumbnail {
+    flex-shrink: 0;
+    margin-right: 2em;
+    width: 250px;
+    height: 368px;
+  }
+  .detail-view-header-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.detail-view-header-info {
+  .detail-view-header-info-title {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 50px;
+    flex: 1;
+  }
+  .detail-view-header-info-additional {
+    flex: 1;
+    display: flex;
+    .lozenge {
+      margin-right: 5px;
+    }
+  }
+  .detail-view-header-info-description {
+    margin-top: 1em;
+    flex: 1;
+  }
+}
+
+.detail-view-seasons-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .left,
+  .right {
+    display: flex;
+  }
+  .middle .mat-icon {
+    transition-duration: 0.25s;
+    &.expanded {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.season-expansion-panel-detail {
+  margin-top: 1em;
+  table {
+    width: 100%;
+  }
+}
+
+.mat-expansion-panel {
+  margin-top: 1em;
+}
+
+.mat-expansion-panel-header {
+  // bordor-color doesn't show up on the expansion panel for some reason
+  border-bottom: 1px solid #e9e9e9;
+}
