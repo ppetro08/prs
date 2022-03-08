@@ -15,10 +15,7 @@
     "skipDefaultLibCheck": true,
     "strictPropertyInitialization": false,
     "baseUrl": "."
-    // "paths": {
-    //   "@shared/lib/": ["libs/shared/src/lib"],
-    //   "@shared/lib/*": ["libs/shared/src/lib/*"]
-    // }
+    // TODO - Setup paths?
   },
   "exclude": ["node_modules", "tmp"]
 }
