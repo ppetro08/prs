@@ -19,9 +19,15 @@ $angular-light-theme: mat.define-light-theme(
 @include mat.core-theme($angular-light-theme);
 @include mat.all-component-themes($angular-light-theme);
 
-@mixin color($color) {
+@mixin backgroundColor($color) {
   // Get the color config from the theme.
   $color-config: mat.get-color-config($angular-light-theme);
 
   background-color: map.get(map.get($color-config, $color), 400);
+}
+
+@function getColor($color) {
+  $color-config: mat.get-color-config($angular-light-theme);
+
+  @return map.get(map.get($color-config, $color), 400);
 }

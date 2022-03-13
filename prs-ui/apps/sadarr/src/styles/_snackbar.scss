@@ -3,5 +3,5 @@
 }
 
 .snackbar-failure {
-  @include color('warn');
+  @include backgroundColor('warn');
 }

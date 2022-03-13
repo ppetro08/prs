@@ -16,7 +16,7 @@
     background-color: $success-green;
   }
   &.lozenge-warn {
-    @include color('warn');
+    @include backgroundColor('warn');
   }
 
   &.lozenge-small {
