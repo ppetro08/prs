@@ -11,12 +11,27 @@
     />
   </mat-form-field>
 </form>
-<pip-loading-overlay [show]="searchLoading$ | async">
-  <pip-radarr-results-container
-    [data]="data$ | async"
-    [profiles]="profiles$ | async"
-    [showNoResultsFound]="showNoResultsFound$ | async"
-    (addClick)="addClicked($event)"
-  >
-  </pip-radarr-results-container>
-</pip-loading-overlay>
+
+<button (click)="resizeImages()">Resize</button>
+
+<virtual-scroller #scroll [items]="filteredMovies" [bufferAmount]="12">
+  <div class="existing-movies" #container>
+    <div class="thumbnail" *ngFor="let movie of scroll.viewPortItems">
+      <a [routerLink]="[movie.id]">
+        <img
+          [src]="movie.remotePoster"
+          [ngClass]="movie.hasFile ? 'downloaded' : 'not-downloaded'"
+          style.width="{{ imgWidth }}px"
+          class="downloaded-border"
+        />
+        <!-- TODO - need placeholder in case remotePoster doesn't exist -->
+        <div class="thumbnail-info">
+          {{ movie.monitored ? 'Monitored' : 'Unmonitored' }}
+        </div>
+        <div class="thumbnail-info">
+          {{ movie.profileId | pipQuality | async }}
+        </div>
+      </a>
+    </div>
+  </div>
+</virtual-scroller>

@@ -9,12 +9,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { DataPersistence } from '@nrwl/angular';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { MovieRequestsApiService } from '../api/movie-requests.api.service';
 import { API_SETTINGS } from '../shared/api/app-settings';
 import { PrsApiService } from '../shared/api/prs.api.service';
 import { LoadingOverlayModule } from '../shared/loading-overlay/loading-overlay.module';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { ExistingMovieComponent } from './existing-movie/existing-movie.component';
+import { QualityModule } from './pipes/quality.module';
 import { RadarrRoutingModule } from './radarr-routing.module';
 import { RadarrApiService } from './radarr.api.service';
 import { ResultsModule } from './results/results.module';
@@ -31,9 +33,11 @@ import * as fromRadarr from './state/radarr.reducer';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
+    QualityModule,
     ReactiveFormsModule,
     ResultsModule,
     RadarrRoutingModule,
+    VirtualScrollerModule,
     StoreModule.forFeature(fromRadarr.RADARR_FEATURE_KEY, fromRadarr.reducer),
     EffectsModule.forFeature([RadarrEffects]),
   ],
@@ -44,6 +48,7 @@ import * as fromRadarr from './state/radarr.reducer';
     MovieRequestsApiService,
     PrsApiService,
     {
+      // TODO - hide this somehow, update other places as well with api keys
       provide: API_SETTINGS,
       useValue: {
         url: 'https://piperopni.ddns.net/radarr/api/v3',

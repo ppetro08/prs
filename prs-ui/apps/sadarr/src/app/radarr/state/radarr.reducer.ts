@@ -21,8 +21,12 @@ export interface RadarrPartialState {
   readonly [RADARR_FEATURE_KEY]: State;
 }
 
+export function sortByTitle(a: MovieLookupApi, b: MovieLookupApi): number {
+  return a.title.localeCompare(b.title);
+}
+
 export const radarrAdapter: EntityAdapter<MovieLookupApi> =
-  createEntityAdapter<MovieLookupApi>();
+  createEntityAdapter<MovieLookupApi>({ sortComparer: sortByTitle });
 
 export const initialState: State = radarrAdapter.getInitialState({
   loading: false,

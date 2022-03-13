@@ -1,3 +1,6 @@
+@import '../../../styles/themes';
+@import '../../../styles/variables';
+
 :host {
   flex: 1;
   width: 70%;
@@ -9,6 +12,10 @@
   }
 }
 
+h1 {
+  margin-top: 0;
+}
+
 form {
   flex: 0 0 auto;
   mat-form-field {
@@ -16,6 +23,44 @@ form {
   }
 }
 
-.results-container {
+virtual-scroller {
   height: 100%;
+}
+
+.existing-movies {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  margin: 0.5em;
+  background-color: white;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  img {
+    width: 140px;
+  }
+}
+
+.downloaded-border {
+  border-bottom: 5px solid;
+  border-color: $border-color;
+  &.downloaded {
+    border-color: $success-green;
+  }
+  &.not-downloaded {
+    border-color: getColor('warn');
+  }
+}
+
+.thumbnail-info {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 0.25em;
 }
