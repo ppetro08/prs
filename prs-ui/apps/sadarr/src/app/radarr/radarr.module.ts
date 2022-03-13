@@ -14,6 +14,7 @@ import { MovieRequestsApiService } from '../api/movie-requests.api.service';
 import { API_SETTINGS } from '../shared/api/app-settings';
 import { PrsApiService } from '../shared/api/prs.api.service';
 import { LoadingOverlayModule } from '../shared/loading-overlay/loading-overlay.module';
+import { ThumbnailModule } from '../shared/thumbnail/thumbnail.module';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { ExistingMovieComponent } from './existing-movie/existing-movie.component';
 import { QualityModule } from './pipes/quality.module';
@@ -37,6 +38,7 @@ import * as fromRadarr from './state/radarr.reducer';
     ReactiveFormsModule,
     ResultsModule,
     RadarrRoutingModule,
+    ThumbnailModule,
     VirtualScrollerModule,
     StoreModule.forFeature(fromRadarr.RADARR_FEATURE_KEY, fromRadarr.reducer),
     EffectsModule.forFeature([RadarrEffects]),

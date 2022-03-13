@@ -88,3 +88,9 @@ export interface RatingsApi {
   value: number;
   votes: number;
 }
+
+export function getRemotePoster(radarrApi: MovieLookupApi): string {
+  return radarrApi.remotePoster
+    ? radarrApi.remotePoster
+    : radarrApi?.images[0]?.remoteUrl;
+}

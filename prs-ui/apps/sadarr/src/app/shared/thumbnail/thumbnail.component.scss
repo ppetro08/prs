@@ -1,0 +1,37 @@
+@import '../../../styles/themes';
+@import '../../../styles/variables';
+
+:host {
+  margin: 0.5em;
+  background-color: white;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  img {
+    width: 140px;
+  }
+}
+
+.downloaded-border {
+  border-bottom: 5px solid;
+  border-color: $border-color;
+  &.downloaded {
+    border-color: $success-green;
+  }
+  &.not-downloaded {
+    border-color: getColor('warn');
+  }
+}
+
+.thumbnail-info {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 0.25em 0.25em 0.25em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

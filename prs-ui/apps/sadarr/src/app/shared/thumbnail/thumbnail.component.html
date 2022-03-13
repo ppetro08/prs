@@ -1,0 +1,18 @@
+<a [routerLink]="[thumbnail.id]">
+  <img
+    [src]="thumbnail.remotePoster"
+    [ngClass]="thumbnail.hasFile ? 'downloaded' : 'not-downloaded'"
+    style.width="{{ width }}px"
+    class="downloaded-border"
+  />
+  <!-- TODO - need placeholder in case remotePoster doesn't exist -->
+  <div class="thumbnail-info">
+    {{ thumbnail.title }}
+  </div>
+  <div class="thumbnail-info">
+    {{ thumbnail.monitored ? 'Monitored' : 'Unmonitored' }}
+  </div>
+  <div class="thumbnail-info">
+    {{ thumbnail.profileId | pipQuality | async }}
+  </div>
+</a>
