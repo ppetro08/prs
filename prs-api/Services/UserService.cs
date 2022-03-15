@@ -50,7 +50,7 @@ namespace prs_api.Services
             var identityResult = await _userManager.ConfirmEmailAsync(user, data.Token);
             if (identityResult == null)
             {
-                throw new Exception("Registration could not be confirmed");
+                throw new AppException("Registration could not be confirmed");
             }
             if (identityResult.Succeeded)
             {
@@ -77,7 +77,7 @@ namespace prs_api.Services
                 return loginResponse;
             }
 
-            throw new Exception(UserNameOrPasswordIncorrectError);
+            throw new AppException(UserNameOrPasswordIncorrectError);
         }
 
         public async Task<RegisterResponseModel> Register(RegisterRequestModel data)

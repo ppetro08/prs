@@ -52,5 +52,11 @@ namespace prs_api.Controllers
             var registerResponse = await _userService.Register(data);
             return Ok(registerResponse);
         }
+
+        [AllowAnonymous]
+        [HttpGet(nameof(CheckSession))]
+        public IActionResult CheckSession() {
+            return Ok(User.Identity?.IsAuthenticated);
+        }
     }
 }

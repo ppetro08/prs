@@ -9,7 +9,7 @@ import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { AuthenticationService } from '../authentication/authentication.service';
 import { AuthenticationPartialState } from '../authentication/state/authentication.reducer';
-import { getUser } from '../authentication/state/authentication.selectors';
+import { getAuthenticationIsLoggedIn } from '../authentication/state/authentication.selectors';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationGuard implements CanActivate {
@@ -22,9 +22,9 @@ export class AuthenticationGuard implements CanActivate {
     _route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> {
-    return this.store.select(getUser).pipe(
-      switchMap((user) => {
-        if (user) {
+    return this.store.select(getAuthenticationIsLoggedIn).pipe(
+      switchMap((isLoggedIn) => {
+        if (isLoggedIn) {
           return of(true);
         }
 

@@ -1,14 +1,12 @@
-import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { fetch } from '@nrwl/angular';
-import { first, map, tap, withLatestFrom } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { catchError, map, mergeMap, tap, withLatestFrom } from 'rxjs/operators';
 import { AuthenticationApiService } from '../../api/authentication.api.service';
-import { MovieRequestsApiService } from '../../api/movie-requests.api.service';
 import { selectQueryParams } from '../../router/router.reducer';
-import { PrsApiService } from '../../shared/api/prs.api.service';
 import { AuthenticationService } from '../authentication.service';
 import * as AuthenticationActions from './authentication.actions';
 
@@ -110,20 +108,34 @@ export class AuthenticationEffects {
   unverifiedSession$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(AuthenticationActions.authenticationUnverifiedSession),
-      map(() => {
-        const currentUser = this.authenticationService.getCurrentUser();
-        const cookie = this.authenticationService.getCookie();
-        if (!currentUser) {
-          return AuthenticationActions.authenticationVerifiedSessionFailure();
-        }
+      mergeMap(() => {
+        const hasSessionResponse = this.authenticationApiService.checkSession();
+        return hasSessionResponse.pipe(
+          map((hasSession) => {
+            const currentUser = this.authenticationService.getCurrentUser();
+            if (hasSession && currentUser) {
+              const cookie = this.authenticationService.getCookie();
+              if (!cookie) {
+                this.authenticationService.setCookieToCurrentUserToken();
+              }
 
-        if (!cookie) {
-          this.authenticationService.setCookieToCurrentUserToken();
-        }
-
-        return AuthenticationActions.authenticationVerifiedSessionSuccess({
-          user: currentUser,
-        });
+              return AuthenticationActions.authenticationVerifiedSessionSuccess(
+                { user: currentUser }
+              );
+            } else {
+              return AuthenticationActions.authenticationVerifiedSessionFailure(
+                { error: 'Invalid Session' }
+              );
+            }
+          }),
+          catchError(({ error }) => {
+            return of(
+              AuthenticationActions.authenticationVerifiedSessionFailure({
+                error,
+              })
+            );
+          })
+        );
       })
     );
   });
@@ -131,25 +143,9 @@ export class AuthenticationEffects {
   updatePrsApiHeaders = createEffect(
     () => {
       return this.actions$.pipe(
-        ofType(
-          AuthenticationActions.authenticationLoginSuccess,
-          AuthenticationActions.authenticationVerifiedSessionSuccess
-        ),
+        ofType(AuthenticationActions.authenticationLoginSuccess),
         tap(() => {
-          const currentHeaders = this.prsApiService.getHeaders();
-          if (currentHeaders) {
-            return;
-          }
-
-          const token = this.authenticationService.getCookie();
-          const httpHeaders: HttpHeaders = new HttpHeaders({
-            Authorization: `Bearer ${token}`,
-          });
-          this.prsApiService.setHeaders(httpHeaders);
-          this.movieRequestsApiService
-            .getAllRequests()
-            .pipe(first())
-            .subscribe();
+          this.authenticationService.setHeaders();
         })
       );
     },
@@ -161,8 +157,6 @@ export class AuthenticationEffects {
     private router: Router,
     private store: Store,
     private authenticationService: AuthenticationService,
-    private authenticationApiService: AuthenticationApiService,
-    private prsApiService: PrsApiService,
-    private movieRequestsApiService: MovieRequestsApiService
+    private authenticationApiService: AuthenticationApiService
   ) {}
 }

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using prs_api.Data;
+using prs_api.ErrorHandling;
 using prs_api.Managers;
 using prs_api.Managers.Abstractions;
 using prs_api.Models.Configuration;
@@ -125,6 +126,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.MapControllers();
 

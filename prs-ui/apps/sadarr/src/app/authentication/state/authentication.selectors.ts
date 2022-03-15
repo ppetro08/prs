@@ -28,10 +28,14 @@ export const getAuthenticationError = createSelector(
 export const getAuthenticationIsAdmin = createSelector(
   getAuthenticationState,
   (state: State) => {
-    const index = state.user?.userRoles?.findIndex(
-      (ur) => ur.role.name === 'Admin'
-    );
-    return index === undefined ? false : index > -1;
+    return state.usersRoles ? state.usersRoles.admin : false;
+  }
+);
+
+export const getAuthenticationUsersRoles = createSelector(
+  getAuthenticationState,
+  (state: State) => {
+    return state.usersRoles;
   }
 );
 

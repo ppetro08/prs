@@ -13,7 +13,8 @@ export const authenticationVerifiedSessionSuccess = createAction(
   props<{ user: UserModel }>()
 );
 export const authenticationVerifiedSessionFailure = createAction(
-  '[Authentication] Verified Session Failure'
+  '[Authentication] Verified Session Failure',
+  props<{ error: string }>()
 );
 
 export const authenticationLogin = createAction(

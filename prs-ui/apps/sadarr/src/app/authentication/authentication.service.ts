@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router, RouterStateSnapshot } from '@angular/router';
 import { Actions, ofType } from '@ngrx/effects';
@@ -5,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { CookieService } from 'ngx-cookie-service';
 import { merge, Observable, of } from 'rxjs';
 import { first, mapTo, switchMap, tap } from 'rxjs/operators';
+import { PrsApiService } from '../shared/api/prs.api.service';
 import { UserModel } from './models/user.model';
 import {
   authenticationUnverifiedSession,
@@ -23,7 +25,8 @@ export class AuthenticationService {
     private cookieService: CookieService,
     private readonly actions$: Actions,
     private store: Store<AuthenticationPartialState>,
-    private router: Router
+    private router: Router,
+    private prsApiService: PrsApiService
   ) {}
 
   checkLogin(state: RouterStateSnapshot): Observable<boolean> {
@@ -51,6 +54,13 @@ export class AuthenticationService {
     return null;
   }
 
+  redirectToLogin(state: RouterStateSnapshot): Observable<boolean> {
+    this.router.navigate(['/authentication/login'], {
+      queryParams: { redirectUrl: state.url },
+    });
+    return of(false);
+  }
+
   resetLocalStorageAndCookies(): void {
     localStorage.clear();
     this.cookieService.deleteAll();
@@ -58,8 +68,8 @@ export class AuthenticationService {
 
   setCookieToCurrentUserToken(): void {
     const user: UserModel | null = this.getCurrentUser();
-    if (user && !this.getCookie()) {
-      this.cookieService.set('Bearer', user.token);
+    if (user && this.getCookie() !== user.token) {
+      this.cookieService.set(this.cookieKey, user.token);
     }
   }
 
@@ -82,15 +92,20 @@ export class AuthenticationService {
       mapTo(false)
     );
 
+    if (!this.prsApiService.getHeaders()) {
+      this.setHeaders();
+    }
+
     this.store.dispatch(authenticationUnverifiedSession());
 
     return merge(success, failure);
   }
 
-  redirectToLogin(state: RouterStateSnapshot): Observable<boolean> {
-    this.router.navigate(['/authentication/login'], {
-      queryParams: { redirectUrl: state.url },
+  setHeaders(): void {
+    const token = this.getCookie();
+    const httpHeaders: HttpHeaders = new HttpHeaders({
+      Authorization: `${this.cookieKey} ${token}`,
     });
-    return of(false);
+    this.prsApiService.setHeaders(httpHeaders);
   }
 }
