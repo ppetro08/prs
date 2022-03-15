@@ -16,7 +16,9 @@
     [data]="data$ | async"
     [profiles]="profiles$ | async"
     [showNoResultsFound]="showNoResultsFound$ | async"
+    [usersRoles]="usersRoles$ | async"
     (addClick)="addClicked($event)"
+    (requestClick)="requestClicked($event)"
   >
   </pip-radarr-results-container>
 </pip-loading-overlay>

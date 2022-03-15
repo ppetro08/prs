@@ -16,5 +16,20 @@ export interface UserRoleModel {
 
 export interface RoleModel {
   id: string;
-  name: string;
+  name: Roles;
 }
+
+export interface UsersRoles {
+  admin: boolean;
+  canAddMovies: boolean;
+  canAddTvShows: boolean;
+  canRequestMovies: boolean;
+  canRequestTvShows: boolean;
+}
+
+export type Roles =
+  | 'Admin'
+  | 'Movie_Add'
+  | 'Movie_Request'
+  | 'TvShow_Add'
+  | 'TvShow_Request';

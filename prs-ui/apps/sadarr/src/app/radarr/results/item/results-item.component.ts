@@ -8,8 +8,9 @@ import {
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
+import { UsersRoles } from '../../../authentication/models/user.model';
 import { Profile } from '../../../shared/profile-select/profile';
-import { AddEvent, Movie } from '../../models/radarr';
+import { AddEvent, Movie, RequestEvent } from '../../models/radarr';
 import { ResultItemFormValue } from './result-item';
 
 @Component({
@@ -26,7 +27,11 @@ export class ResultsItemComponent implements OnDestroy {
 
   @Input() profiles: Profile[] = [];
 
+  @Input() usersRoles: UsersRoles | null;
+
   @Output() addClick = new EventEmitter<AddEvent>();
+
+  @Output() requestClick = new EventEmitter<RequestEvent>();
 
   formGroup: FormGroup;
 

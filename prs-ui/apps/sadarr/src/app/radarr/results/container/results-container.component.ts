@@ -7,8 +7,9 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
+import { UsersRoles } from '../../../authentication/models/user.model';
 import { Profile } from '../../../shared/profile-select/profile';
-import { AddEvent, Movie } from '../../models/radarr';
+import { AddEvent, Movie, RequestEvent } from '../../models/radarr';
 
 @Component({
   selector: 'pip-radarr-results-container',
@@ -44,13 +45,21 @@ export class ResultsContainerComponent {
 
   @Input() showNoResultsFound: boolean | null = null;
 
+  @Input() usersRoles: UsersRoles | null = null;
+
   @Output() addClick = new EventEmitter<AddEvent>();
+
+  @Output() requestClick = new EventEmitter<RequestEvent>();
 
   @ViewChild(CdkVirtualScrollViewport)
   cdkVirtualScrollViewport: CdkVirtualScrollViewport | null = null;
 
   addClicked(item: AddEvent): void {
     this.addClick.emit(item);
+  }
+
+  requestClicked(item: RequestEvent): void {
+    this.requestClick.emit(item);
   }
 
   scrollToTop(): void {

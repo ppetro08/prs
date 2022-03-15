@@ -7,6 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { RouterModule } from '@angular/router';
 import { LozengeModule } from '../../shared/lozenge/lozenge.module';
 import { TimeModule } from '../../shared/pipes/time/time.module';
 import { ProfileSelectModule } from '../../shared/profile-select/profile-select.module';
@@ -25,6 +26,7 @@ import { ResultsItemComponent } from './item/results-item.component';
     MatSelectModule,
     ProfileSelectModule,
     ReactiveFormsModule,
+    RouterModule,
     ScrollingModule,
     TimeModule,
     QualityModule,

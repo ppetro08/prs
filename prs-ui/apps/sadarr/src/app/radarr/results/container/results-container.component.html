@@ -5,6 +5,8 @@
     *cdkVirtualFor="let item of data"
     [item]="item"
     [profiles]="profiles"
+    [usersRoles]="usersRoles"
     (addClick)="addClicked($event)"
+    (requestClick)="requestClicked($event)"
   ></pip-radarr-results-item>
 </cdk-virtual-scroll-viewport>

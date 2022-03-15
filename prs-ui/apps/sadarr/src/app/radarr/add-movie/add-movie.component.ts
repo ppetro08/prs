@@ -8,16 +8,18 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, map, takeUntil } from 'rxjs/operators';
+import { UsersRoles } from '../../authentication/models/user.model';
+import { getAuthenticationUsersRoles } from '../../authentication/state/authentication.selectors';
 import { Profile } from '../../shared/profile-select/profile';
-import { AddEvent, Movie } from '../models/radarr';
+import { AddEvent, Movie, RequestEvent } from '../models/radarr';
 import { ResultsContainerComponent } from '../results/container/results-container.component';
 import {
   addMovie,
   clearSearch,
   radarrInit,
+  requestMovie,
   search,
 } from '../state/radarr.actions';
-import { RadarrPartialState } from '../state/radarr.reducer';
 import {
   convertRadarrApiToRadarr,
   getRadarrProfiles,
@@ -44,23 +46,23 @@ export class AddMovieComponent implements OnDestroy {
 
   showNoResultsFound$: Observable<boolean>;
 
+  usersRoles$: Observable<UsersRoles | null>;
+
   form: FormGroup;
 
   private destroyed$ = new Subject<void>();
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private radarrStore: Store<RadarrPartialState>
-  ) {
-    this.radarrStore.dispatch(radarrInit());
-    this.data$ = this.radarrStore
+  constructor(private formBuilder: FormBuilder, private store: Store) {
+    this.store.dispatch(radarrInit());
+    this.data$ = this.store
       .select(getRadarrSearchResults)
       .pipe(
         map((sr) => sr.map((movieApi) => convertRadarrApiToRadarr(movieApi)))
       );
-    this.searchLoading$ = this.radarrStore.select(getRadarrSearchLoading);
-    this.profiles$ = this.radarrStore.select(getRadarrProfiles);
-    this.showNoResultsFound$ = this.radarrStore.select(showNoResultsFound);
+    this.searchLoading$ = this.store.select(getRadarrSearchLoading);
+    this.profiles$ = this.store.select(getRadarrProfiles);
+    this.showNoResultsFound$ = this.store.select(showNoResultsFound);
+    this.usersRoles$ = this.store.select(getAuthenticationUsersRoles);
 
     const searchControl: FormControl = this.formBuilder.control(null);
     this.form = this.formBuilder.group({
@@ -70,9 +72,9 @@ export class AddMovieComponent implements OnDestroy {
       .pipe(debounceTime(400), takeUntil(this.destroyed$))
       .subscribe((searchText: string) => {
         if (searchText !== '' && searchText !== null) {
-          this.radarrStore.dispatch(search({ searchText }));
+          this.store.dispatch(search({ searchText }));
         } else {
-          this.radarrStore.dispatch(clearSearch());
+          this.store.dispatch(clearSearch());
         }
         this.resultsContainerComponent?.scrollToTop();
       });
@@ -83,6 +85,10 @@ export class AddMovieComponent implements OnDestroy {
   }
 
   addClicked(item: AddEvent): void {
-    this.radarrStore.dispatch(addMovie({ addMovie: item }));
+    this.store.dispatch(addMovie({ addMovie: item }));
+  }
+
+  requestClicked(item: RequestEvent): void {
+    this.store.dispatch(requestMovie({ requestMovie: item }));
   }
 }
