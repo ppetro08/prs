@@ -5,6 +5,8 @@ import { Store } from '@ngrx/store';
 import { fetch, pessimisticUpdate } from '@nrwl/angular';
 import { forkJoin } from 'rxjs';
 import { map, tap, withLatestFrom } from 'rxjs/operators';
+import { MovieRequest } from '../../api/models/movie-request.model';
+import { MovieRequestsApiService } from '../../api/movie-requests.api.service';
 import { containsCaseInsensitive } from '../../shared/utils/string-extensions';
 import { AddMovieResponseApi } from '../models/radarr-api';
 import { RadarrApiService } from '../radarr.api.service';
@@ -77,7 +79,7 @@ export class RadarrEffects {
         ofType(RadarrActions.addMovieSuccess),
         tap(() => {
           // Todo - Possibly add button to go to added movie detail page in snackbar
-          this.snackBar.open('Added movie successfully.', undefined, {
+          this.snackBar.open('Movie added.', undefined, {
             duration: 3000,
             panelClass: 'snackbar-success',
             horizontalPosition: 'center',
@@ -133,6 +135,92 @@ export class RadarrEffects {
     )
   );
 
+  requestMovie$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(RadarrActions.requestMovie),
+      withLatestFrom(this.store.select(getRadarrState)),
+      pessimisticUpdate({
+        run: (action, state: State) => {
+          if (!state.searchResults) {
+            throw Error('Cannot request movie without searching first.');
+          }
+          const movieToAdd = state.searchResults.find(
+            (sr) =>
+              sr.id === action.requestMovie.id ||
+              sr.tmdbId === action.requestMovie.tmdbId
+          );
+
+          if (!movieToAdd) {
+            throw Error('Cannot find movie in search results.');
+          }
+
+          const rootFolderPath: string | null =
+            getRadarrDefaultFolderFromRootFolders(state.rootFolders);
+
+          if (!rootFolderPath) {
+            throw Error('Root folder unknown.');
+          }
+
+          return this.movieRequestsApiService
+            .addRequest({
+              ...movieToAdd,
+              addOptions: {
+                searchForMovie: true,
+              },
+              monitored: true,
+              qualityProfileId: action.requestMovie.profileId,
+              rootFolderPath,
+            })
+            .pipe(
+              map((movieRequest: MovieRequest) => {
+                return RadarrActions.requestMovieSuccess({
+                  requestedMovie: { ...movieRequest },
+                });
+              })
+            );
+        },
+        onError: (_action, error) => {
+          console.error('Error', error);
+          return RadarrActions.addMovieFailure({ error });
+        },
+      })
+    )
+  );
+
+  requestMovieSuccess$ = createEffect(
+    () => {
+      return this.actions$.pipe(
+        ofType(RadarrActions.requestMovieSuccess),
+        tap(() => {
+          this.snackBar.open('Movie requested.', undefined, {
+            duration: 3000,
+            panelClass: 'snackbar-success',
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+          });
+        })
+      );
+    },
+    { dispatch: false }
+  );
+
+  requestMovieFailure$ = createEffect(
+    () => {
+      return this.actions$.pipe(
+        ofType(RadarrActions.requestMovieFailure),
+        tap(() => {
+          this.snackBar.open('Failed to request movie.', undefined, {
+            duration: 3000,
+            panelClass: 'snackbar-failure',
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+          });
+        })
+      );
+    },
+    { dispatch: false }
+  );
+
   search$ = createEffect(() =>
     this.actions$.pipe(
       ofType(RadarrActions.search),
@@ -171,6 +259,7 @@ export class RadarrEffects {
     private readonly actions$: Actions,
     private radarrApiService: RadarrApiService,
     private store: Store<State>,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private movieRequestsApiService: MovieRequestsApiService
   ) {}
 }

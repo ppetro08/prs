@@ -19,3 +19,9 @@ export interface AddEvent {
   profileId: number;
   tmdbId: number;
 }
+
+export interface RequestEvent {
+  id?: number;
+  profileId: number;
+  tmdbId: number;
+}

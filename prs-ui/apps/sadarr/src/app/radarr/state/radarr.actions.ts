@@ -1,7 +1,8 @@
 import { createAction, props } from '@ngrx/store';
+import { MovieRequest } from '../../api/models/movie-request.model';
 import { RootFolderApi } from '../../shared/models/root-folder-api';
 import { Profile } from '../../shared/profile-select/profile';
-import { AddEvent } from '../models/radarr';
+import { AddEvent, RequestEvent } from '../models/radarr';
 import { MovieLookupApi } from '../models/radarr-api';
 
 export const radarrInit = createAction('[Radarr Page] Init');
@@ -46,5 +47,19 @@ export const addMovieSuccess = createAction(
 );
 export const addMovieFailure = createAction(
   '[Radarr/API] Add Movie Failure',
+  props<{ error: any }>()
+);
+
+// TODO - After requesting, if it was added mark it as approved
+export const requestMovie = createAction(
+  '[Radarr/API] Request Movie',
+  props<{ requestMovie: RequestEvent }>()
+);
+export const requestMovieSuccess = createAction(
+  '[Radarr/API] Request Movie Success',
+  props<{ requestedMovie: MovieRequest }>()
+);
+export const requestMovieFailure = createAction(
+  '[Radarr/API] Request Movie Failure',
   props<{ error: any }>()
 );

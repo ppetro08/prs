@@ -1,4 +1,4 @@
-<form *ngIf="item" [formGroup]="formGroup" (ngSubmit)="onSubmit(item)">
+<form *ngIf="item" [formGroup]="formGroup">
   <div class="results-item-header">
     <div class="result-detail-title">
       <div class="result-detail-title-text">
@@ -61,16 +61,18 @@
             <button
               mat-raised-button
               color="primary"
-              type="submit"
+              type="button"
               *ngIf="usersRoles?.canAddMovies"
+              (click)="addClicked(item)"
             >
               Add
             </button>
             <button
               mat-raised-button
               color="primary"
-              type="submit"
+              type="button"
               *ngIf="usersRoles?.canRequestMovies"
+              (click)="requestClicked(item)"
             >
               Request
             </button>
@@ -81,8 +83,9 @@
               mat-raised-button
               color="primary"
               [routerLink]="['/movies', item.id]"
-              >Go to detail page</a
             >
+              Go to detail page
+            </a>
           </ng-template>
         </div>
       </div>

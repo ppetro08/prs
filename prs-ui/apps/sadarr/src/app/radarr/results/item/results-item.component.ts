@@ -47,8 +47,12 @@ export class ResultsItemComponent implements OnDestroy {
     this.destroyed$.next();
   }
 
-  onSubmit(item: Movie): void {
+  addClicked(item: Movie): void {
     this.addClick.emit(this.convertRadarrToAddEvent(item));
+  }
+
+  requestClicked(item: Movie): void {
+    this.requestClick.emit(this.convertRadarrToAddEvent(item));
   }
 
   private convertRadarrToAddEvent(radarr: Movie): AddEvent {

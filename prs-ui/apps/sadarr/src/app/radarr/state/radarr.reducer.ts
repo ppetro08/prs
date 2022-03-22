@@ -7,6 +7,8 @@ import * as RadarrActions from './radarr.actions';
 
 export const RADARR_FEATURE_KEY = 'radarr';
 
+// TODO - Need to track if a movie has been requested in the search results
+
 export interface State extends EntityState<MovieLookupApi> {
   error?: string | null; // last known error (if any)
   loading: boolean;

@@ -12,6 +12,13 @@ const routes: Routes = [
     },
   },
   {
+    path: 'movies/:id',
+    component: ExistingMovieComponent,
+    data: {
+      title: 'Movies',
+    },
+  },
+  {
     path: 'add-movie',
     component: AddMovieComponent,
     data: {
