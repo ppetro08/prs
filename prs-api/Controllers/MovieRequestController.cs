@@ -30,5 +30,20 @@ namespace prs_api.Controllers
             var movies = _movieRequestManager.GetByUserId(userId);
             return movies;
         }
+
+        [HttpPost]
+        public MovieRequestModel Post(MovieRequestAddModel movieRequestPostModel)
+        {
+            // TODO - Create some sort of session for ease of passing a user?
+            var movie = _movieRequestManager.AddMovieRequest(movieRequestPostModel, User);
+            return movie;
+        }
+
+        [HttpPost(nameof(ApproveMovieRequest))]
+        public bool ApproveMovieRequest(int id)
+        {
+            var approved = _movieRequestManager.ApproveMovieRequest(id);
+            return approved;
+        }
     }
 }

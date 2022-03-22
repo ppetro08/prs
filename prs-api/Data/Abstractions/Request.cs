@@ -3,7 +3,6 @@
     public class Request
     {
         public int Id { get; set; }
-        public bool Approved { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime? ApproveDate { get; set; }
 

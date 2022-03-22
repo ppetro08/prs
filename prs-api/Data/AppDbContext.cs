@@ -27,7 +27,13 @@ namespace prs_api.Data
 
         private void SeedUsers(ModelBuilder modelBuilder)
         {
-            var user = new User
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.UserRoles)
+                .WithOne(ur => ur.User)
+                .HasForeignKey(u => u.UserId)
+                .IsRequired();
+
+            var admin = new User
             {
                 Id = new Guid("103972dd-e25b-4ea6-a84a-b7db0cd9020d"),
                 NormalizedEmail = "ADMIN@GMAIL.COM",
@@ -39,15 +45,23 @@ namespace prs_api.Data
                 SecurityStamp = new Guid().ToString()
             };
             PasswordHasher<User> passwordHasher = new PasswordHasher<User>();
-            user.PasswordHash = passwordHasher.HashPassword(user, "Testing123!");
+            admin.PasswordHash = passwordHasher.HashPassword(admin, "Testing123!");
 
-            modelBuilder.Entity<User>()
-                .HasMany(u => u.UserRoles)
-                .WithOne(ur => ur.User)
-                .HasForeignKey(u => u.UserId)
-                .IsRequired();
+            var requester = new User
+            {
+                Id = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9"),
+                NormalizedEmail = "REQUESTER@GMAIL.COM",
+                Email = "requester@gmail.com",
+                EmailConfirmed = true,
+                NormalizedUserName = "REQUESTER@GMAIL.COM",
+                UserName = "requester@gmail.com",
+                LastName = "Requester",
+                SecurityStamp = new Guid().ToString()
+            };
+            passwordHasher = new PasswordHasher<User>();
+            requester.PasswordHash = passwordHasher.HashPassword(requester, "Testing123!");
 
-            modelBuilder.Entity<User>().HasData(user);
+            modelBuilder.Entity<User>().HasData(admin, requester);
         }
 
         private void SeedRoles(ModelBuilder modelBuilder)
@@ -101,6 +115,16 @@ namespace prs_api.Data
                     {
                         RoleId = new Guid("a873fe11-88ec-4d46-bf93-930840a945db"),
                         UserId = new Guid("103972dd-e25b-4ea6-a84a-b7db0cd9020d")
+                    },
+                    new UserRole
+                    {
+                        RoleId = new Guid("e9415c2a-f804-4c6b-a849-b015f80a8348"),
+                        UserId = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9")
+                    },
+                    new UserRole
+                    {
+                        RoleId = new Guid("6fe5a246-0e24-4260-9ca9-2abc9633ce46"),
+                        UserId = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9")
                     }
                 );
         }
@@ -112,7 +136,6 @@ namespace prs_api.Data
                     new MovieRequest
                     {
                         Id = 1,
-                        Approved = true,
                         ApproveDate = DateTime.Now,
                         CreateDate = DateTime.Now,
                         MovieDbid = 1234,
@@ -121,7 +144,6 @@ namespace prs_api.Data
                     new MovieRequest
                     {
                         Id = 2,
-                        Approved = false,
                         ApproveDate = null,
                         CreateDate = DateTime.Now,
                         MovieDbid = 1234,

@@ -1,6 +1,7 @@
 ﻿using prs_api.Managers.Abstractions;
 using prs_api.Models.Dtos;
 using prs_api.Services.Abstractions;
+using System.Security.Claims;
 
 namespace prs_api.Managers
 {
@@ -29,6 +30,18 @@ namespace prs_api.Managers
         {
             var movies = _movieRequestService.GetByUserId(userId);
             return movies;
+        }
+
+        public MovieRequestModel AddMovieRequest(MovieRequestAddModel movieRequestPostModel, ClaimsPrincipal user)
+        {
+            var movie = _movieRequestService.AddMovieRequest(movieRequestPostModel, user);
+            return movie;
+        }
+
+        public bool ApproveMovieRequest(int id)
+        {
+            var result = _movieRequestService.ApproveMovieRequest(id);
+            return result;
         }
     }
 }

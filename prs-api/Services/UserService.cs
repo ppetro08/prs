@@ -72,7 +72,7 @@ namespace prs_api.Services
             if (signInResult.Succeeded)
             {
                 var loginResponse = _mapper.Map<LoginResponseModel>(user);
-                loginResponse.Token = generateJwtToken();
+                loginResponse.Token = generateJwtToken(user.Id);
 
                 return loginResponse;
             }
@@ -122,7 +122,7 @@ namespace prs_api.Services
                 .SingleOrDefaultAsync(u => u.Email == email);
         }
 
-        private string generateJwtToken()
+        private string generateJwtToken(Guid userId)
         {
             // generate token that is valid for 7 days
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -132,7 +132,9 @@ namespace prs_api.Services
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Role, "Admin")
+                // TODO - Set the roles for real here
+                new Claim(ClaimTypes.Role, "Admin"),
+                new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
             };
             var claimsIdentity = new ClaimsIdentity(claims);
             var jwtToken = tokenHandler.CreateJwtSecurityToken(
