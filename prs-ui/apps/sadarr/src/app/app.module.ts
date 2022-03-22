@@ -17,8 +17,7 @@ import { AuthenticationEffects } from './authentication/state/authentication.eff
 import * as AuthenticationReducer from './authentication/state/authentication.reducer';
 import { HomeModule } from './home/home.module';
 import { routerStateKey } from './router/router.reducer';
-import { API_SETTINGS } from './shared/api/app-settings';
-import { PrsApiService } from './shared/api/prs.api.service';
+import { INTERNAL_API_SETTINGS } from './shared/api/app-settings';
 
 @NgModule({
   declarations: [AppComponent],
@@ -53,9 +52,8 @@ import { PrsApiService } from './shared/api/prs.api.service';
   bootstrap: [AppComponent],
   providers: [
     CookieService,
-    PrsApiService,
     {
-      provide: API_SETTINGS,
+      provide: INTERNAL_API_SETTINGS,
       useValue: {
         url: environment.prsApiUrl,
       },

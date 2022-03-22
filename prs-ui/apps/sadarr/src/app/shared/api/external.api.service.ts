@@ -1,19 +1,24 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { InternalApiSettings, INTERNAL_API_SETTINGS } from './app-settings';
+import { ExternalApiSettings, EXTERNAL_API_SETTINGS } from './app-settings';
 import { BaseApiService } from './base.api.service';
 
-@Injectable({ providedIn: 'root' })
-export class PrsApiService extends BaseApiService {
+@Injectable()
+export class ExternalApiService extends BaseApiService {
   constructor(
-    @Inject(INTERNAL_API_SETTINGS) apiSettings: InternalApiSettings,
+    @Inject(EXTERNAL_API_SETTINGS) apiSettings: ExternalApiSettings,
     http: HttpClient
   ) {
     super(http);
     if (apiSettings) {
-      const { url } = apiSettings;
+      const { url, key, value } = apiSettings;
       this.url = url;
+      if (key) {
+        this.headers = new HttpHeaders({
+          [key]: value,
+        });
+      }
     }
   }
 
@@ -27,13 +32,5 @@ export class PrsApiService extends BaseApiService {
 
   public post<T>(endpoint: string, body: any): Observable<T> {
     return super.post<T>(endpoint, body);
-  }
-
-  public getHeaders(): HttpHeaders {
-    return this.headers;
-  }
-
-  public setHeaders(headers: HttpHeaders) {
-    this.headers = headers;
   }
 }

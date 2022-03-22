@@ -11,8 +11,8 @@ import { StoreModule } from '@ngrx/store';
 import { DataPersistence } from '@nrwl/angular';
 import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { MovieRequestsApiService } from '../api/movie-requests.api.service';
-import { API_SETTINGS } from '../shared/api/app-settings';
-import { PrsApiService } from '../shared/api/prs.api.service';
+import { EXTERNAL_API_SETTINGS } from '../shared/api/app-settings';
+import { ExternalApiService } from '../shared/api/external.api.service';
 import { LoadingOverlayModule } from '../shared/loading-overlay/loading-overlay.module';
 import { ThumbnailModule } from '../shared/thumbnail/thumbnail.module';
 import { AddMovieComponent } from './add-movie/add-movie.component';
@@ -45,13 +45,13 @@ import * as fromRadarr from './state/radarr.reducer';
   ],
   declarations: [AddMovieComponent, ExistingMovieComponent],
   providers: [
-    RadarrApiService,
     DataPersistence,
+    ExternalApiService,
     MovieRequestsApiService,
-    PrsApiService,
+    RadarrApiService,
     {
       // TODO - hide this somehow, update other places as well with api keys
-      provide: API_SETTINGS,
+      provide: EXTERNAL_API_SETTINGS,
       useValue: {
         url: 'https://piperopni.ddns.net/radarr/api/v3',
         key: 'X-Api-Key',

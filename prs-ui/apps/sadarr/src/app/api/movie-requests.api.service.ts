@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { MovieLookupApi } from '../radarr/models/radarr-api';
 import { PrsApiService } from '../shared/api/prs.api.service';
-import { MovieRequest } from './models/movie-request.model';
+import { MovieRequest, MovieRequestAdd } from './models/movie-request.model';
 
 @Injectable()
 export class MovieRequestsApiService {
@@ -15,10 +14,10 @@ export class MovieRequestsApiService {
     return this.prsApiService.get<MovieRequest[]>(`MovieRequest/${userId}`);
   }
 
-  addRequest(movieLookupApi: MovieLookupApi): Observable<MovieRequest> {
+  addRequest(movieRequestAdd: MovieRequestAdd): Observable<MovieRequest> {
     return this.prsApiService.post<MovieRequest>(
       `MovieRequest`,
-      movieLookupApi
+      movieRequestAdd
     );
   }
 }
