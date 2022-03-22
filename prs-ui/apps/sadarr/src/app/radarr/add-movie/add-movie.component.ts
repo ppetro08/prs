@@ -7,7 +7,7 @@ import {
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable, Subject } from 'rxjs';
-import { debounceTime, map, takeUntil } from 'rxjs/operators';
+import { debounceTime, takeUntil } from 'rxjs/operators';
 import { UsersRoles } from '../../authentication/models/user.model';
 import { getAuthenticationUsersRoles } from '../../authentication/state/authentication.selectors';
 import { Profile } from '../../shared/profile-select/profile';
@@ -21,7 +21,6 @@ import {
   search,
 } from '../state/radarr.actions';
 import {
-  convertRadarrApiToRadarr,
   getRadarrProfiles,
   getRadarrSearchLoading,
   getRadarrSearchResults,
@@ -54,11 +53,7 @@ export class AddMovieComponent implements OnDestroy {
 
   constructor(private formBuilder: FormBuilder, private store: Store) {
     this.store.dispatch(radarrInit());
-    this.data$ = this.store
-      .select(getRadarrSearchResults)
-      .pipe(
-        map((sr) => sr.map((movieApi) => convertRadarrApiToRadarr(movieApi)))
-      );
+    this.data$ = this.store.select(getRadarrSearchResults);
     this.searchLoading$ = this.store.select(getRadarrSearchLoading);
     this.profiles$ = this.store.select(getRadarrProfiles);
     this.showNoResultsFound$ = this.store.select(showNoResultsFound);

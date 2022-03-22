@@ -7,6 +7,7 @@ export interface Movie {
   profileId: number;
   rating?: number;
   remotePoster: string;
+  requested: boolean;
   status: string;
   studio: string;
   title: string;

@@ -117,12 +117,18 @@ export class RadarrEffects {
             this.radarrApiService.loadAllMovies(),
             this.radarrApiService.loadProfiles(),
             this.radarrApiService.loadRootFolder(),
+            this.movieRequestsApiService.getAllRequests(),
           ]).pipe(
-            map(([movies, profiles, rootFolders]) => {
+            map(([movies, profiles, rootFolders, movieRequests]) => {
+              const movieRequestSet = new Set<number>(
+                movieRequests.map((mr) => mr.movieDbid)
+              );
               return RadarrActions.radarrInitSuccess({
                 entities: movies,
                 profiles,
                 rootFolders,
+                movieRequests,
+                movieRequestSet,
               });
             })
           );
@@ -135,6 +141,10 @@ export class RadarrEffects {
     )
   );
 
+  // Request Actions
+
+  // TODO - Move request info to different reducer,
+  // then will have to combine the two when search results comeback to check if item has already been requested to update buttons
   requestMovie$ = createEffect(() =>
     this.actions$.pipe(
       ofType(RadarrActions.requestMovie),
@@ -144,32 +154,20 @@ export class RadarrEffects {
           if (!state.searchResults) {
             throw Error('Cannot request movie without searching first.');
           }
-          const movieToAdd = state.searchResults.find(
+          const movieToRequest = state.searchResults.find(
             (sr) =>
               sr.id === action.requestMovie.id ||
               sr.tmdbId === action.requestMovie.tmdbId
           );
 
-          if (!movieToAdd) {
+          if (!movieToRequest) {
             throw Error('Cannot find movie in search results.');
-          }
-
-          const rootFolderPath: string | null =
-            getRadarrDefaultFolderFromRootFolders(state.rootFolders);
-
-          if (!rootFolderPath) {
-            throw Error('Root folder unknown.');
           }
 
           return this.movieRequestsApiService
             .addRequest({
-              ...movieToAdd,
-              addOptions: {
-                searchForMovie: true,
-              },
-              monitored: true,
+              movieDbid: action.requestMovie.tmdbId,
               qualityProfileId: action.requestMovie.profileId,
-              rootFolderPath,
             })
             .pipe(
               map((movieRequest: MovieRequest) => {
@@ -221,6 +219,8 @@ export class RadarrEffects {
     { dispatch: false }
   );
 
+  // End Request Actions
+
   search$ = createEffect(() =>
     this.actions$.pipe(
       ofType(RadarrActions.search),
@@ -229,6 +229,7 @@ export class RadarrEffects {
           return this.radarrApiService.search(action.searchText).pipe(
             map((movies) => {
               // TOOD:P - Sort by most recent or rating or something, add in full fledge sorting?
+
               return RadarrActions.searchSuccess({ movies: movies });
             })
           );

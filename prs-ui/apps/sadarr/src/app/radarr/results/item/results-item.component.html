@@ -72,9 +72,10 @@
               color="primary"
               type="button"
               *ngIf="usersRoles?.canRequestMovies"
+              [disabled]="item.requested"
               (click)="requestClicked(item)"
             >
-              Request
+              {{ item.requested ? 'Requested' : 'Request' }}
             </button>
           </ng-container>
           <ng-template #goToDetailPage>

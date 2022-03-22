@@ -10,6 +10,8 @@ export const radarrInitSuccess = createAction(
   '[Radarr/API] Radarr Init Success',
   props<{
     entities: MovieLookupApi[];
+    movieRequestSet: Set<number>;
+    movieRequests: MovieRequest[];
     profiles: Profile[];
     rootFolders: RootFolderApi[];
   }>()

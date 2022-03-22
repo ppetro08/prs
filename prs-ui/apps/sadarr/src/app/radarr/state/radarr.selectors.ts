@@ -58,7 +58,11 @@ export const getRadarrProfiles = createSelector(
 
 export const getRadarrSearchResults = createSelector(
   getRadarrState,
-  (state: State) => state.searchResults
+  (state: State) => {
+    return state.searchResults.map((sr) =>
+      convertRadarrApiToRadarr(sr, state.movieRequestSet)
+    );
+  }
 );
 
 export const showNoResultsFound = createSelector(
@@ -85,7 +89,10 @@ function convertStatusStringToReadable(status: MovieStatusApi): string {
   return capitalizeFirstLetter(status);
 }
 
-export function convertRadarrApiToRadarr(radarrApi: MovieLookupApi): Movie {
+export function convertRadarrApiToRadarr(
+  radarrApi: MovieLookupApi,
+  movieRequestSet: Set<number> | null
+): Movie {
   return {
     id: radarrApi.id,
     monitored: radarrApi.monitored,
@@ -96,6 +103,7 @@ export function convertRadarrApiToRadarr(radarrApi: MovieLookupApi): Movie {
     remotePoster: radarrApi.remotePoster
       ? radarrApi.remotePoster
       : radarrApi?.images[0]?.remoteUrl,
+    requested: movieRequestSet?.has(radarrApi.tmdbId) ?? false,
     status: convertStatusStringToReadable(radarrApi.status),
     title: radarrApi.title,
     tmdbId: radarrApi.tmdbId,
