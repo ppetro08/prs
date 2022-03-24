@@ -1,9 +1,9 @@
 <form
   [formGroup]="form"
   (ngSubmit)="saveUser(form)"
-  class="admin-edit-dailog-form"
+  class="user-management-edit-dailog-form"
 >
-  <h2 mat-dialog-title class="admin-edit-dialog-header">Edit User</h2>
+  <h2 mat-dialog-title class="user-management-edit-dialog-header">Edit User</h2>
 
   <mat-dialog-content>
     <mat-form-field appearance="outline" id="name">
@@ -24,7 +24,7 @@
     </mat-checkbox>
   </mat-dialog-content>
 
-  <mat-dialog-actions align="end" class="admin-edit-dialog-footer">
+  <mat-dialog-actions align="end" class="user-management-edit-dialog-footer">
     <button mat-button mat-dialog-close>Cancel</button>
     <button
       [mat-dialog-close]="true"

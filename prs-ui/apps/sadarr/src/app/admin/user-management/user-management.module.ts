@@ -8,17 +8,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { LoadingOverlayModule } from '../shared/loading-overlay/loading-overlay.module';
-import { RoleModule } from '../shared/pipes/role/role.module';
-import { AdminEditDialogComponent } from './admin-edit-dialog/admin-edit-dialog.component';
-import { AdminRoutingModule } from './admin-routing.module';
-import { AdminComponent } from './admin.component';
-import { AdminService } from './admin.service';
+import { LoadingOverlayModule } from '../../shared/loading-overlay/loading-overlay.module';
+import { RoleModule } from '../../shared/pipes/role/role.module';
+import { UserManagementEditDialogComponent } from './user-management-edit-dialog/user-management-edit-dialog.component';
+import { UserManagementRoutingModule } from './user-management-routing.module';
+import { UserManagementComponent } from './user-management.component';
+import { UserManagementService } from './user-management.service';
 
 @NgModule({
-  declarations: [AdminComponent, AdminEditDialogComponent],
+  declarations: [UserManagementComponent, UserManagementEditDialogComponent],
   imports: [
-    AdminRoutingModule,
+    UserManagementRoutingModule,
     CommonModule,
     FormsModule,
     LoadingOverlayModule,
@@ -32,7 +32,7 @@ import { AdminService } from './admin.service';
     ReactiveFormsModule,
     RoleModule,
   ],
-  providers: [AdminService],
-  exports: [AdminComponent],
+  providers: [UserManagementService],
+  exports: [UserManagementComponent],
 })
-export class AdminModule {}
+export class UserManagementModule {}

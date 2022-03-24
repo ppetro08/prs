@@ -7,17 +7,17 @@ import {
 import { MatDialog } from '@angular/material/dialog';
 import { Subject } from 'rxjs';
 import { take } from 'rxjs/operators';
-import { UserModel } from '../authentication/models/user.model';
-import { AdminEditDialogComponent } from './admin-edit-dialog/admin-edit-dialog.component';
-import { AdminService } from './admin.service';
+import { UserModel } from '../../authentication/models/user.model';
+import { UserManagementEditDialogComponent } from './user-management-edit-dialog/user-management-edit-dialog.component';
+import { UserManagementService } from './user-management.service';
 
 @Component({
-  selector: 'pip-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss'],
+  selector: 'pip-user-management',
+  templateUrl: './user-management.component.html',
+  styleUrls: ['./user-management.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AdminComponent implements OnDestroy {
+export class UserManagementComponent implements OnDestroy {
   displayedColumns = ['displayName', 'roles', 'verified', 'edit'];
 
   loading = true;
@@ -29,9 +29,9 @@ export class AdminComponent implements OnDestroy {
   constructor(
     private dialog: MatDialog,
     private changeDetectorRef: ChangeDetectorRef,
-    private adminService: AdminService
+    private userManagementService: UserManagementService
   ) {
-    this.adminService
+    this.userManagementService
       .getUsers()
       .pipe(take(1))
       .subscribe((users) => {
@@ -44,9 +44,11 @@ export class AdminComponent implements OnDestroy {
   }
 
   editUser(user: UserModel): void {
-    const dialogRef = this.dialog.open(AdminEditDialogComponent, {
+    const dialogRef = this.dialog.open(UserManagementEditDialogComponent, {
       data: { user },
     });
+
+    // TODO - Saving a user should update the state and that will trigger the selector to update the users instead of this slice shit
 
     dialogRef.afterClosed().subscribe((updatedUser: UserModel) => {
       // TODO on save instead of just closing?

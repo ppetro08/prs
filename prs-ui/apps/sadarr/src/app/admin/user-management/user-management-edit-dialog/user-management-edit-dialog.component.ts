@@ -2,23 +2,29 @@ import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { first } from 'rxjs/operators';
-import { AdminService } from '../admin.service';
-import { AdminEditDialogData, AdminFormValue } from '../models/admin';
+import {
+  UserManagementEditDialogData,
+  UserManagementFormValue,
+} from '../user-management';
+import { UserManagementService } from '../user-management.service';
 
 @Component({
-  selector: 'pip-admin-edit-dialog',
-  templateUrl: 'admin-edit-dialog.component.html',
-  styleUrls: ['admin-edit-dialog.component.scss'],
+  selector: 'pip-user-management-edit-dialog',
+  templateUrl: 'user-management-edit-dialog.component.html',
+  styleUrls: ['user-management-edit-dialog.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AdminEditDialogComponent {
+export class UserManagementEditDialogComponent {
   form: FormGroup;
 
   constructor(
-    public dialogRef: MatDialogRef<AdminEditDialogComponent, AdminFormValue>,
-    @Inject(MAT_DIALOG_DATA) public data: AdminEditDialogData,
+    public dialogRef: MatDialogRef<
+      UserManagementEditDialogComponent,
+      UserManagementFormValue
+    >,
+    @Inject(MAT_DIALOG_DATA) public data: UserManagementEditDialogData,
     private formBuilder: FormBuilder,
-    private adminService: AdminService
+    private userManagementService: UserManagementService
   ) {
     const roles = data.user.userRoles.map((ur) => ur.role.name).join(', ');
 
@@ -30,8 +36,8 @@ export class AdminEditDialogComponent {
   }
 
   saveUser(form: FormGroup): void {
-    const formValue: AdminFormValue = form.value;
-    this.adminService
+    const formValue: UserManagementFormValue = form.value;
+    this.userManagementService
       .saveUser(formValue)
       .pipe(first())
       .subscribe(() => {
