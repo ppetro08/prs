@@ -1,0 +1,49 @@
+<h1>Request Management</h1>
+<pip-loading-overlay [show]="loading">
+  <table
+    mat-table
+    [dataSource]="movieRequests"
+    class="request-management-table"
+  >
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef>User's Name</th>
+      <td mat-cell *matCellDef="let movieRequest">
+        {{ movieRequest.user.firstName }}
+        {{ movieRequest.user.lastName }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="movieName">
+      <th mat-header-cell *matHeaderCellDef>Movie Name</th>
+      <td mat-cell *matCellDef="let movieRequest">
+        {{ movieRequest.name }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="quality">
+      <th mat-header-cell *matHeaderCellDef>Quality</th>
+      <td mat-cell *matCellDef="let movieRequest">
+        {{ movieRequest.qualityProfileId | pipQuality | async }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="requestDate">
+      <th mat-header-cell *matHeaderCellDef>Request Date</th>
+      <td mat-cell *matCellDef="let movieRequest">
+        {{ movieRequest.createDate | date: 'short' }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="approve">
+      <th mat-header-cell *matHeaderCellDef class="approve-column"></th>
+      <td mat-cell *matCellDef="let movieRequest" class="approve-column">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="approveMovieRequest(movieRequest)"
+        >
+          Approve
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</pip-loading-overlay>

@@ -5,11 +5,11 @@ import { Store } from '@ngrx/store';
 import { fetch, pessimisticUpdate } from '@nrwl/angular';
 import { forkJoin } from 'rxjs';
 import { map, tap, withLatestFrom } from 'rxjs/operators';
-import { MovieRequest } from '../../api/models/movie-request.model';
+import { MovieRequestApi } from '../../api/models/movie-request.model';
 import { MovieRequestsApiService } from '../../api/movie-requests.api.service';
+import { RadarrApiService } from '../../shared/api/radarr.api.service';
 import { containsCaseInsensitive } from '../../shared/utils/string-extensions';
 import { AddMovieResponseApi } from '../models/radarr-api';
-import { RadarrApiService } from '../radarr.api.service';
 import * as RadarrActions from './radarr.actions';
 import { searchSuccess } from './radarr.actions';
 import { State } from './radarr.reducer';
@@ -112,23 +112,15 @@ export class RadarrEffects {
     this.actions$.pipe(
       ofType(RadarrActions.radarrInit),
       fetch({
-        run: () => {
+        run: (_action, movieRequestSet) => {
           return forkJoin([
             this.radarrApiService.loadAllMovies(),
-            this.radarrApiService.loadProfiles(),
             this.radarrApiService.loadRootFolder(),
-            this.movieRequestsApiService.getAllRequests(),
           ]).pipe(
-            map(([movies, profiles, rootFolders, movieRequests]) => {
-              const movieRequestSet = new Set<number>(
-                movieRequests.map((mr) => mr.movieDbid)
-              );
+            map(([movies, rootFolders]) => {
               return RadarrActions.radarrInitSuccess({
                 entities: movies,
-                profiles,
                 rootFolders,
-                movieRequests,
-                movieRequestSet,
               });
             })
           );
@@ -165,12 +157,12 @@ export class RadarrEffects {
           }
 
           return this.movieRequestsApiService
-            .addRequest({
+            .addMovieRequest({
               movieDbid: action.requestMovie.tmdbId,
               qualityProfileId: action.requestMovie.profileId,
             })
             .pipe(
-              map((movieRequest: MovieRequest) => {
+              map((movieRequest: MovieRequestApi) => {
                 return RadarrActions.requestMovieSuccess({
                   requestedMovie: { ...movieRequest },
                 });

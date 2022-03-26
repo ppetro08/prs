@@ -1,7 +1,6 @@
 import { createAction, props } from '@ngrx/store';
-import { MovieRequest } from '../../api/models/movie-request.model';
+import { MovieRequestApi } from '../../api/models/movie-request.model';
 import { RootFolderApi } from '../../shared/models/root-folder-api';
-import { Profile } from '../../shared/profile-select/profile';
 import { AddEvent, RequestEvent } from '../models/radarr';
 import { MovieLookupApi } from '../models/radarr-api';
 
@@ -10,9 +9,6 @@ export const radarrInitSuccess = createAction(
   '[Radarr/API] Radarr Init Success',
   props<{
     entities: MovieLookupApi[];
-    movieRequestSet: Set<number>;
-    movieRequests: MovieRequest[];
-    profiles: Profile[];
     rootFolders: RootFolderApi[];
   }>()
 );
@@ -59,7 +55,7 @@ export const requestMovie = createAction(
 );
 export const requestMovieSuccess = createAction(
   '[Radarr/API] Request Movie Success',
-  props<{ requestedMovie: MovieRequest }>()
+  props<{ requestedMovie: MovieRequestApi }>()
 );
 export const requestMovieFailure = createAction(
   '[Radarr/API] Request Movie Failure',
