@@ -18,6 +18,8 @@ import * as AuthenticationReducer from './authentication/state/authentication.re
 import { HomeModule } from './home/home.module';
 import { routerStateKey } from './router/router.reducer';
 import { INTERNAL_API_SETTINGS } from './shared/api/app-settings';
+import { CoreEffects } from './shared/state/core-state.effects';
+import * as fromCore from './shared/state/core-state.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -48,6 +50,8 @@ import { INTERNAL_API_SETTINGS } from './shared/api/app-settings';
     }),
     EffectsModule.forRoot([AuthenticationEffects, AppEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreModule.forFeature(fromCore.CORE_FEATURE_KEY, fromCore.reducer),
+    EffectsModule.forFeature([CoreEffects]),
   ],
   bootstrap: [AppComponent],
   providers: [
