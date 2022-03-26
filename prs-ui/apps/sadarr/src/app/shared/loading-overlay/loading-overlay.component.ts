@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+// TODO - Update pip prefixes, why isn't this erroring?
 @Component({
   selector: 'pip-loading-overlay',
   templateUrl: './loading-overlay.component.html',

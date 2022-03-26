@@ -1,14 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ExternalApiService } from '../shared/api/external.api.service';
-import { RootFolderApi } from '../shared/models/root-folder-api';
-import { Profile } from '../shared/profile-select/profile';
-import { AddMovieResponseApi, MovieLookupApi } from './models/radarr-api';
+import {
+  AddMovieResponseApi,
+  MovieLookupApi,
+} from '../../radarr/models/radarr-api';
+import { RootFolderApi } from '../models/root-folder-api';
+import { Profile } from '../profile-select/profile';
+import { ExternalApiSettings } from './app-settings';
+import { ExternalApiService } from './external.api.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class RadarrApiService {
-  constructor(private externalApiService: ExternalApiService) {}
+  // TODO - hide this somehow, update other places as well with api keys
+  private readonly apiSettings: ExternalApiSettings = {
+    url: 'https://piperopni.ddns.net/radarr/api/v3',
+    key: 'X-Api-Key',
+    value: '4020ff99a9774d62b03e519964cf8497',
+  };
+
+  constructor(private externalApiService: ExternalApiService) {
+    // TODO - Is there a better way to do this?
+    this.externalApiService.setHeaders(this.apiSettings);
+  }
 
   addMovie(movie: MovieLookupApi): Observable<AddMovieResponseApi> {
     return this.externalApiService.post<AddMovieResponseApi>('movie', movie);

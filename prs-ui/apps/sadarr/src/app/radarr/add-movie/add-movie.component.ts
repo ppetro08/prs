@@ -11,6 +11,7 @@ import { debounceTime, takeUntil } from 'rxjs/operators';
 import { UsersRoles } from '../../authentication/models/user.model';
 import { getAuthenticationUsersRoles } from '../../authentication/state/authentication.selectors';
 import { Profile } from '../../shared/profile-select/profile';
+import { getMovieProfiles } from '../../shared/state/core-state.selectors';
 import { AddEvent, Movie, RequestEvent } from '../models/radarr';
 import { ResultsContainerComponent } from '../results/container/results-container.component';
 import {
@@ -21,7 +22,6 @@ import {
   search,
 } from '../state/radarr.actions';
 import {
-  getRadarrProfiles,
   getRadarrSearchLoading,
   getRadarrSearchResults,
   showNoResultsFound,
@@ -55,7 +55,7 @@ export class AddMovieComponent implements OnDestroy {
     this.store.dispatch(radarrInit());
     this.data$ = this.store.select(getRadarrSearchResults);
     this.searchLoading$ = this.store.select(getRadarrSearchLoading);
-    this.profiles$ = this.store.select(getRadarrProfiles);
+    this.profiles$ = this.store.select(getMovieProfiles);
     this.showNoResultsFound$ = this.store.select(showNoResultsFound);
     this.usersRoles$ = this.store.select(getAuthenticationUsersRoles);
 

@@ -7,8 +7,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { EXTERNAL_API_SETTINGS } from '../shared/api/app-settings';
-import { ExternalApiService } from '../shared/api/external.api.service';
 import { LoadingOverlayModule } from '../shared/loading-overlay/loading-overlay.module';
 import { ResultsModule } from './results/results.module';
 import { SonarrRoutingModule } from './sonarr-routing.module';
@@ -33,17 +31,6 @@ import * as fromSonarr from './state/sonarr.reducer';
     StoreModule.forFeature(fromSonarr.SONARR_FEATURE_KEY, fromSonarr.reducer),
     EffectsModule.forFeature([SonarrEffects]),
   ],
-  providers: [
-    ExternalApiService,
-    SonarrApiService,
-    {
-      provide: EXTERNAL_API_SETTINGS,
-      useValue: {
-        url: 'https://piperopni.ddns.net/sonarr/api/v3',
-        key: 'X-Api-Key',
-        value: '2ae85b65c2104fd1a85e4781d274d899',
-      },
-    },
-  ],
+  providers: [SonarrApiService],
 })
 export class SonarrModule {}

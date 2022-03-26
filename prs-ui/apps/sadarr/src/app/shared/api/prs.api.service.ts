@@ -25,6 +25,7 @@ export class PrsApiService extends BaseApiService {
     return super.get<T>(`${endpoint}/${id}`);
   }
 
+  // TODO - Add return type for body
   public post<T>(endpoint: string, body: any): Observable<T> {
     return super.post<T>(endpoint, body);
   }
