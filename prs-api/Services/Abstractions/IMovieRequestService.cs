@@ -9,6 +9,6 @@ namespace prs_api.Services.Abstractions
         public MovieRequestModel? GetById(int id);
         public IList<MovieRequestModel> GetByUserId(Guid userId);
         public MovieRequestModel AddMovieRequest(MovieRequestAddModel movieRequestPostModel, ClaimsPrincipal user);
-        public bool ApproveMovieRequest(int id);
+        public DateTime? ApproveMovieRequest(int id);
     }
 }

@@ -55,19 +55,19 @@ namespace prs_api.Services
             return _mapper.Map<MovieRequestModel>(savedMovie);
         }
 
-        public bool ApproveMovieRequest(int id)
+        public DateTime? ApproveMovieRequest(int id)
         {
             var movie = _appDbContext.MovieRequests.SingleOrDefault(mr => mr.Id == id);
             if(movie == null)
             {
-                return false;
+                return null;
             }
             movie.ApproveDate = DateTime.UtcNow;
 
             _appDbContext.MovieRequests.Update(movie);
             _appDbContext.SaveChanges();
 
-            return true;
+            return movie.ApproveDate;
         }
     }
 }

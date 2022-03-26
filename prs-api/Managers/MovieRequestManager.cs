@@ -38,7 +38,7 @@ namespace prs_api.Managers
             return movie;
         }
 
-        public bool ApproveMovieRequest(int id)
+        public DateTime? ApproveMovieRequest(int id)
         {
             var result = _movieRequestService.ApproveMovieRequest(id);
             return result;

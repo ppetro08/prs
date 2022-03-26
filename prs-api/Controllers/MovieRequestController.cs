@@ -39,8 +39,8 @@ namespace prs_api.Controllers
             return movie;
         }
 
-        [HttpPost(nameof(ApproveMovieRequest))]
-        public bool ApproveMovieRequest(int id)
+        [HttpPost($"{{id}}/{nameof(ApproveMovieRequest)}")]
+        public DateTime? ApproveMovieRequest(int id)
         {
             var approved = _movieRequestManager.ApproveMovieRequest(id);
             return approved;
