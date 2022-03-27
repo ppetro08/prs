@@ -7,46 +7,45 @@ import {
 } from '../../radarr/models/radarr-api';
 import { RootFolderApi } from '../models/root-folder-api';
 import { Profile } from '../profile-select/profile';
-import { ExternalApiSettings } from './app-settings';
-import { ExternalApiService } from './external.api.service';
+import { PrsApiService } from './prs.api.service';
 
 @Injectable({ providedIn: 'root' })
 export class RadarrApiService {
-  // TODO - hide this somehow, update other places as well with api keys
-  private readonly apiSettings: ExternalApiSettings = {
-    url: 'https://piperopni.ddns.net/radarr/api/v3',
-    key: 'X-Api-Key',
-    value: '4020ff99a9774d62b03e519964cf8497',
-  };
+  private readonly endpoint = 'api/radarr';
 
-  constructor(private externalApiService: ExternalApiService) {
-    // TODO - Is there a better way to do this?
-    this.externalApiService.setHeaders(this.apiSettings);
-  }
+  constructor(private prsApiService: PrsApiService) {}
 
   addMovie(movie: MovieLookupApi): Observable<AddMovieResponseApi> {
-    return this.externalApiService.post<AddMovieResponseApi>('movie', movie);
+    return this.prsApiService.post<AddMovieResponseApi>(
+      `${this.endpoint}/movie`,
+      movie
+    );
   }
 
   getMovie(id: number): Observable<MovieLookupApi> {
-    return this.externalApiService.getSingle<MovieLookupApi>('movie', id);
+    return this.prsApiService.getSingle<MovieLookupApi>(
+      `${this.endpoint}/movie`,
+      id
+    );
   }
 
   loadAllMovies(): Observable<MovieLookupApi[]> {
-    return this.externalApiService.get<MovieLookupApi[]>('movie');
+    return this.prsApiService.get<MovieLookupApi[]>(`${this.endpoint}/movie`);
   }
 
   loadProfiles(): Observable<Profile[]> {
-    return this.externalApiService.get<Profile[]>(`qualityprofile`);
+    return this.prsApiService.get<Profile[]>(`${this.endpoint}/qualityprofile`);
   }
 
   loadRootFolder(): Observable<RootFolderApi[]> {
-    return this.externalApiService.get<RootFolderApi[]>(`rootFolder`);
+    return this.prsApiService.get<RootFolderApi[]>(
+      `${this.endpoint}/rootFolder`
+    );
   }
 
   search(searchText: string): Observable<MovieLookupApi[]> {
-    return this.externalApiService
-      .get<MovieLookupApi[]>(`movie/lookup?term=${searchText}`)
+    return this.prsApiService
+      .get<MovieLookupApi[]>(`${this.endpoint}/movie/lookup?term=${searchText}`)
       .pipe(
         map((results) => {
           if (results.length > 20) {

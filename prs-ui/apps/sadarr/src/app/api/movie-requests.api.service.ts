@@ -8,29 +8,33 @@ import {
 
 @Injectable()
 export class MovieRequestsApiService {
+  private readonly endpoint = 'movieRequest';
+
   constructor(private prsApiService: PrsApiService) {}
 
   addMovieRequest(
     movieRequestAdd: MovieRequestAddApi
   ): Observable<MovieRequestApi> {
     return this.prsApiService.post<MovieRequestApi>(
-      `MovieRequest`,
+      this.endpoint,
       movieRequestAdd
     );
   }
 
   approveMovieRequest(id: number): Observable<Date> {
     return this.prsApiService.post<Date>(
-      `MovieRequest/${id}/ApproveMovieRequest`,
+      `${this.endpoint}/${id}/ApproveMovieRequest`,
       null
     );
   }
 
   getAllRequests(): Observable<MovieRequestApi[]> {
-    return this.prsApiService.get<MovieRequestApi[]>(`MovieRequest`);
+    return this.prsApiService.get<MovieRequestApi[]>(this.endpoint);
   }
 
   getUserRequests(userId: number): Observable<MovieRequestApi[]> {
-    return this.prsApiService.get<MovieRequestApi[]>(`MovieRequest/${userId}`);
+    return this.prsApiService.get<MovieRequestApi[]>(
+      `${this.endpoint}/${userId}`
+    );
   }
 }

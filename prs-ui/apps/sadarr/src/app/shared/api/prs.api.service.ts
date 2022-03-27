@@ -1,16 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { InternalApiSettings, INTERNAL_API_SETTINGS } from './app-settings';
-import { BaseApiService } from './base.api.service';
+import { ApiSettings, API_SETTINGS } from './app-settings';
 
 @Injectable({ providedIn: 'root' })
-export class PrsApiService extends BaseApiService {
+export class PrsApiService {
+  public url: string;
+  public headers: HttpHeaders;
+
   constructor(
-    @Inject(INTERNAL_API_SETTINGS) apiSettings: InternalApiSettings,
-    http: HttpClient
+    @Inject(API_SETTINGS) apiSettings: ApiSettings,
+    private http: HttpClient
   ) {
-    super(http);
     if (apiSettings) {
       const { url } = apiSettings;
       this.url = url;
@@ -18,16 +19,19 @@ export class PrsApiService extends BaseApiService {
   }
 
   public get<T>(endpoint: string): Observable<T> {
-    return super.get<T>(endpoint);
+    return this.http.get<T>(`${this.url}/${endpoint}`, {
+      headers: this.headers,
+    });
   }
 
   public getSingle<T>(endpoint: string, id: number): Observable<T> {
-    return super.get<T>(`${endpoint}/${id}`);
+    return this.get<T>(`${endpoint}/${id}`);
   }
 
-  // TODO - Add return type for body
   public post<T>(endpoint: string, body: any): Observable<T> {
-    return super.post<T>(endpoint, body);
+    return this.http.post<T>(`${this.url}/${endpoint}`, body, {
+      headers: this.headers,
+    });
   }
 
   public getHeaders(): HttpHeaders {

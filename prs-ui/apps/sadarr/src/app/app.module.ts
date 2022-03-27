@@ -17,7 +17,7 @@ import { AuthenticationEffects } from './authentication/state/authentication.eff
 import * as AuthenticationReducer from './authentication/state/authentication.reducer';
 import { HomeModule } from './home/home.module';
 import { routerStateKey } from './router/router.reducer';
-import { INTERNAL_API_SETTINGS } from './shared/api/app-settings';
+import { API_SETTINGS } from './shared/api/app-settings';
 import { CoreEffects } from './shared/state/core-state.effects';
 import * as fromCore from './shared/state/core-state.reducer';
 
@@ -57,7 +57,7 @@ import * as fromCore from './shared/state/core-state.reducer';
   providers: [
     CookieService,
     {
-      provide: INTERNAL_API_SETTINGS,
+      provide: API_SETTINGS,
       useValue: {
         url: environment.prsApiUrl,
       },

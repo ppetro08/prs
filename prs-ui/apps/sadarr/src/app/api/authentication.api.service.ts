@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ConfirmRegistrationRequestModel } from '../authentication/models/confirm-registration.model';
@@ -12,30 +11,28 @@ import { MessageResponse } from './models/message-response.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationApiService {
-  private baseUrl: string = 'https://localhost:7299/authentication';
-  constructor(private http: HttpClient, private prsApiService: PrsApiService) {}
+  private readonly endpoint = 'authentication';
+
+  constructor(private prsApiService: PrsApiService) {}
 
   checkSession(): Observable<boolean> {
-    return this.prsApiService.get<boolean>('Authentication/CheckSession');
+    return this.prsApiService.get<boolean>(`${this.endpoint}/CheckSession`);
   }
 
   confirmRegistration(
     confirmRegistration: ConfirmRegistrationRequestModel
   ): Observable<MessageResponse> {
-    return this.http.post<MessageResponse>(
-      `${this.baseUrl}/confirmregistration`,
+    return this.prsApiService.post(
+      `${this.endpoint}/confirmregistration`,
       confirmRegistration
     );
   }
 
   login(login: LoginRequestModel): Observable<LoginResponseModel> {
-    return this.http.post<LoginResponseModel>(`${this.baseUrl}/login`, login);
+    return this.prsApiService.post(`${this.endpoint}/login`, login);
   }
 
   register(register: RegisterRequestModel): Observable<MessageResponse> {
-    return this.http.post<MessageResponse>(
-      `${this.baseUrl}/register`,
-      register
-    );
+    return this.prsApiService.post(`${this.endpoint}/register`, register);
   }
 }

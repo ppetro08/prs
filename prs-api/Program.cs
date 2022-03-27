@@ -7,6 +7,7 @@ using prs_api.Data;
 using prs_api.ErrorHandling;
 using prs_api.Managers;
 using prs_api.Managers.Abstractions;
+using prs_api.Middleware;
 using prs_api.Models.Configuration;
 using prs_api.Services;
 using prs_api.Services.Abstractions;
@@ -128,6 +129,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseMiddleware<ErrorHandlerMiddleware>();
+app.UseMiddleware<ReverseProxyMiddleware>();
 
 app.MapControllers();
 
