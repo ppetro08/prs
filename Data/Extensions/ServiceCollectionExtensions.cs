@@ -13,12 +13,10 @@ namespace Lkq.Data.SelfServe.Extensions
             services.AddTransient<HttpMessageHandler, HttpClientHandler>();
             services.AddHttpClient<IRadarrService, RadarrService>(c =>
             {
-                var apis = appSettings.Apis;
-                if (apis != null && apis.Radarr != null)
+                if (appSettings.Apis?.Radarr != null)
                 {
-                    var endpointSettings = apis.Radarr;
-                    c.BaseAddress = new Uri(endpointSettings.Url);
-                    c.DefaultRequestHeaders.Add("API-Token", apis.Radarr.Key);
+                    c.BaseAddress = new Uri(appSettings.Apis.Radarr.Url);
+                    c.DefaultRequestHeaders.Add("API-Token", appSettings.Apis.Radarr.Key);
                 }
             });
 

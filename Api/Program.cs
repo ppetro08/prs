@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Prs_Api.Core.Mappers;
 using Prs_Api.Data;
 using Prs_Api.ErrorHandling;
 using Prs_Api.Extensions;
@@ -103,7 +104,7 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.Configure<AppSettings>(builder.Configuration);
 builder.Services.AddManagersAndServices();
-builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 var app = builder.Build();
 

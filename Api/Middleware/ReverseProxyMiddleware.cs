@@ -1,13 +1,18 @@
-﻿namespace Prs_Api.Middleware
+﻿using Microsoft.Extensions.Options;
+using Prs_Api.Models.Configuration;
+
+namespace Prs_Api.Middleware
 {
     public class ReverseProxyMiddleware
     {
         private static readonly HttpClient _httpClient = new HttpClient();
         private readonly RequestDelegate _nextMiddleware;
+        private readonly IOptions<AppSettings> _appSettings;
 
-        public ReverseProxyMiddleware(RequestDelegate nextMiddleware)
+        public ReverseProxyMiddleware(RequestDelegate nextMiddleware, IOptions<AppSettings> appSettings)
         {
             _nextMiddleware = nextMiddleware;
+            _appSettings = appSettings;
         }
 
         public async Task Invoke(HttpContext context)
@@ -97,15 +102,22 @@
 
             if (request.Path.StartsWithSegments("/api/radarr", out var remainingPath))
             {
-                // TODO - Move these keys to configuration
-                // TODO - Could hit db for this info if decided
-                request.Headers.Add("X-API-Key", "4020ff99a9774d62b03e519964cf8497");
-                targetUri = new Uri("https://piperopni.ddns.net/radarr/api/v3" + remainingPath + request.QueryString);
+                var radarrSettings = _appSettings.Value.Apis?.Radarr;
+                // TODO - How can I securely store these keys?
+                if (radarrSettings != null)
+                {
+                    request.Headers.Add("X-API-Key", radarrSettings.Key);
+                    targetUri = new Uri(radarrSettings.Url + remainingPath + request.QueryString);
+                }
             }
             else if (request.Path.StartsWithSegments("/api/sonarr", out remainingPath))
             {
-                request.Headers.Add("X-Api-Key", "2ae85b65c2104fd1a85e4781d274d899");
-                targetUri = new Uri("https://piperopni.ddns.net/sonarr/api/v3" + remainingPath + request.QueryString);
+                var sonarrSettings = _appSettings.Value.Apis?.Sonarr;
+                if (sonarrSettings != null)
+                {
+                    request.Headers.Add("X-Api-Key", sonarrSettings.Key);
+                    targetUri = new Uri(sonarrSettings.Url + remainingPath + request.QueryString);
+                }
             }
 
             return targetUri;

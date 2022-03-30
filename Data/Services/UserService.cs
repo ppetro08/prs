@@ -73,7 +73,7 @@ namespace Prs_Api.Services
             if (signInResult.Succeeded)
             {
                 var loginResponse = _mapper.Map<LoginResponseModel>(user);
-                loginResponse.Token = generateJwtToken(user.Id);
+                loginResponse.Token = generateJwtToken(user);
 
                 return loginResponse;
             }
@@ -123,7 +123,7 @@ namespace Prs_Api.Services
                 .SingleOrDefaultAsync(u => u.Email == email);
         }
 
-        private string generateJwtToken(Guid userId)
+        private string generateJwtToken(User user)
         {
             // generate token that is valid for 7 days
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -133,18 +133,26 @@ namespace Prs_Api.Services
 
             var claims = new List<Claim>
             {
-                // TODO - Set the roles for real here
-                new Claim(ClaimTypes.Role, "Admin"),
-                new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             };
+
+            foreach (var role in user.UserRoles)
+            {
+                if (role.Role != null)
+                {
+                    var roleClaim = new Claim(ClaimTypes.Role, role.Role.Name);
+                    claims.Add(roleClaim);
+                }
+            }
+
             var claimsIdentity = new ClaimsIdentity(claims);
             var jwtToken = tokenHandler.CreateJwtSecurityToken(
-                jwtSettings.Issuer, 
-                jwtSettings.Audience, 
-                claimsIdentity, 
-                null, 
-                DateTime.UtcNow.AddDays(7), 
-                null, 
+                jwtSettings.Issuer,
+                jwtSettings.Audience,
+                claimsIdentity,
+                null,
+                DateTime.UtcNow.AddDays(7),
+                null,
                 signingCredentials);
             return tokenHandler.WriteToken(jwtToken);
         }
