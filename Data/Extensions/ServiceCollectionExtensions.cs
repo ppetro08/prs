@@ -9,14 +9,13 @@ namespace Lkq.Data.SelfServe.Extensions
     {
         public static IServiceCollection AddHttpClients(this IServiceCollection services, AppSettings appSettings)
         {
-            // TODO - What is this for?
             services.AddTransient<HttpMessageHandler, HttpClientHandler>();
             services.AddHttpClient<IRadarrService, RadarrService>(c =>
             {
                 if (appSettings.Apis?.Radarr != null)
                 {
                     c.BaseAddress = new Uri(appSettings.Apis.Radarr.Url);
-                    c.DefaultRequestHeaders.Add("API-Token", appSettings.Apis.Radarr.Key);
+                    c.DefaultRequestHeaders.Add("X-Api-Key", appSettings.Apis.Radarr.Key);
                 }
             });
 

@@ -8,8 +8,7 @@
         public int QualityProfileId { get; set; }
         public string Name { get; set; } = String.Empty;
 
-
-        public string UserId { get; set; } = String.Empty;
+        public Guid UserId { get; set; }
         public UserModel? User { get; set; } = null;
     }
 }

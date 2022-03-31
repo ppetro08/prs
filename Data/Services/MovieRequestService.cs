@@ -41,9 +41,9 @@ namespace Prs_Api.Services
             return movies;
         }
 
-        public MovieRequestModel AddMovieRequest(MovieRequestAddModel movieRequestPostModel, ClaimsPrincipal user)
+        public MovieRequestModel AddMovieRequest(MovieRequestModel movieRequestModel, ClaimsPrincipal user)
         {
-            var movieRequest = _mapper.Map<MovieRequest>(movieRequestPostModel);
+            var movieRequest = _mapper.Map<MovieRequest>(movieRequestModel);
             movieRequest.CreateDate = DateTime.UtcNow;
             
             var userId = _userManager.GetUserId(user);
@@ -56,19 +56,23 @@ namespace Prs_Api.Services
             return _mapper.Map<MovieRequestModel>(savedMovie);
         }
 
-        public DateTime? ApproveMovieRequest(int id)
+        public MovieRequestModel? ApproveMovieRequest(int id, int? qualityProfileId = null)
         {
             var movie = _appDbContext.MovieRequests.SingleOrDefault(mr => mr.Id == id);
-            if(movie == null)
+            if (movie == null)
             {
                 return null;
             }
             movie.ApproveDate = DateTime.UtcNow;
+            if (qualityProfileId != null)
+            {
+                movie.QualityProfileId = qualityProfileId.Value;
+            }
 
             _appDbContext.MovieRequests.Update(movie);
             _appDbContext.SaveChanges();
 
-            return movie.ApproveDate;
+            return _mapper.Map<MovieRequestModel>(movie);
         }
     }
 }

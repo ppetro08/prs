@@ -1,3 +1,4 @@
+using Lkq.Data.SelfServe.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -103,7 +104,10 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.Configure<AppSettings>(builder.Configuration);
+
+var appSettings = builder.Configuration.Get<AppSettings>();
 builder.Services.AddManagersAndServices();
+builder.Services.AddHttpClients(appSettings);
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 var app = builder.Build();

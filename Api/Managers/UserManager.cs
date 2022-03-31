@@ -5,6 +5,7 @@ using Prs_Api.Services.Abstractions;
 
 namespace Prs_Api.Managers
 {
+    // TODO - Validation against current user
     public class UserManager: IUserManager
     {
         private readonly IUserService _userService;

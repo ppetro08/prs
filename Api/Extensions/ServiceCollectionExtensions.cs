@@ -1,4 +1,6 @@
 ﻿using Prs_Api.Data;
+using Prs_Api.Data.Services;
+using Prs_Api.Data.Services.Abstractions;
 using Prs_Api.Managers;
 using Prs_Api.Managers.Abstractions;
 using Prs_Api.Services;
@@ -13,7 +15,8 @@ namespace Prs_Api.Extensions
             return services.AddScoped<IAppDbContext, AppDbContext>()
             .AddScoped<IUserService, UserService>()
             .AddScoped<IMovieRequestManager, MovieRequestManager>()
-            .AddScoped<IMovieRequestService, MovieRequestService>();
+            .AddScoped<IMovieRequestService, MovieRequestService>()
+            .AddScoped<IRadarrService, RadarrService>();
         }
     }
 }

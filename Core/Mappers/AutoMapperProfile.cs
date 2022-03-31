@@ -21,7 +21,7 @@ namespace Prs_Api.Core.Mappers
             CreateMap<Role, RoleModel>().PreserveReferences().MaxDepth(1);
             CreateMap<MovieRequest, MovieRequestModel>().PreserveReferences();
             CreateMap<TvRequest, TvRequestModel>().PreserveReferences();
-            CreateMap<MovieRequestAddModel, MovieRequest>();
+            CreateMap<MovieRequestModel, MovieRequest>().PreserveReferences();
         }
 
         private void CustomMaps()
