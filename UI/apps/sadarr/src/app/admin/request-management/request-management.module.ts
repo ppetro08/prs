@@ -6,7 +6,6 @@ import { QualityModule } from '../../radarr/pipes/quality.module';
 import { LoadingOverlayModule } from '../../shared/loading-overlay/loading-overlay.module';
 import { RequestManagementRoutingModule } from './request-management-routing.module';
 import { RequestManagementComponent } from './request-management.component';
-import { RequestManagementService } from './request-management.service';
 
 @NgModule({
   declarations: [RequestManagementComponent],
@@ -18,7 +17,6 @@ import { RequestManagementService } from './request-management.service';
     MatTableModule,
     QualityModule,
   ],
-  providers: [RequestManagementService],
   exports: [RequestManagementComponent],
 })
 export class RequestManagementModule {}

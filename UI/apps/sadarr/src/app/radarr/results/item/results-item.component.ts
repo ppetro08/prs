@@ -52,14 +52,23 @@ export class ResultsItemComponent implements OnDestroy {
   }
 
   requestClicked(item: Movie): void {
-    this.requestClick.emit(this.convertRadarrToAddEvent(item));
+    this.requestClick.emit(this.convertRadarrToRequestEvent(item));
   }
 
   private convertRadarrToAddEvent(radarr: Movie): AddEvent {
     const resultItemFormValue: ResultItemFormValue = this.formGroup.value;
     return {
-      profileId: resultItemFormValue.profile,
+      qualityProfileId: resultItemFormValue.profile,
       tmdbId: radarr.tmdbId,
+    };
+  }
+
+  private convertRadarrToRequestEvent(radarr: Movie): RequestEvent {
+    const resultItemFormValue: ResultItemFormValue = this.formGroup.value;
+    return {
+      qualityProfileId: resultItemFormValue.profile,
+      movieDbid: radarr.tmdbId,
+      name: radarr.title,
     };
   }
 }

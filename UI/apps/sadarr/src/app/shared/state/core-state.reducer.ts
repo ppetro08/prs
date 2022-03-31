@@ -47,6 +47,15 @@ const coreReducer = createReducer(
     ...state,
     error,
   })),
+  on(CoreActions.requestMovieSuccess, (state, { requestedMovie }) => {
+    const movieRequestSet = new Set(state.movieRequestSet);
+    movieRequestSet.add(requestedMovie.movieDbid);
+    return {
+      ...state,
+      movieRequests: [...state.movieRequests, requestedMovie],
+      movieRequestSet: new Set(movieRequestSet),
+    };
+  }),
   on(CoreActions.approveMovieRequestSuccess, (state, { id, approveDate }) => {
     const index = state.movieRequests.findIndex((mr) => mr.id === id);
     return {

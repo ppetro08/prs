@@ -1,5 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { MovieRequestApi } from '../../api/models/movie-request.model';
+import { RequestEvent } from '../../radarr/models/radarr';
 import { Profile } from '../profile-select/profile';
 
 export const coreInitSuccess = createAction(
@@ -17,7 +18,7 @@ export const coreInitFailure = createAction(
 
 export const approveMovieRequest = createAction(
   '[Core/API] Approve Movie Request',
-  props<{ id: number }>()
+  props<{ id: number; qualityProfileId: number }>()
 );
 export const approveMovieRequestSuccess = createAction(
   '[Core/API] Approve Movie Request Success',
@@ -25,5 +26,18 @@ export const approveMovieRequestSuccess = createAction(
 );
 export const approveMovieRequestFailure = createAction(
   '[Core/API] Approve Movie Request Failure',
+  props<{ error: any }>()
+);
+
+export const requestMovie = createAction(
+  '[Radarr/API] Request Movie',
+  props<{ requestMovie: RequestEvent }>()
+);
+export const requestMovieSuccess = createAction(
+  '[Radarr/API] Request Movie Success',
+  props<{ requestedMovie: MovieRequestApi }>()
+);
+export const requestMovieFailure = createAction(
+  '[Radarr/API] Request Movie Failure',
   props<{ error: any }>()
 );

@@ -14,5 +14,6 @@ export interface MovieRequestApi {
 
 export interface MovieRequestAddApi {
   movieDbid: number;
+  name: string;
   qualityProfileId: number;
 }

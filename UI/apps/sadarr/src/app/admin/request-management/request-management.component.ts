@@ -14,6 +14,7 @@ import { getUnapprovedMovieRequests } from '../../shared/state/core-state.select
 
 // TODO - Need movieRequests and qualityProfile moved to a shared store that can be used in multiple modules?
 // TODO - Ability to edit request quality
+// TODO - Didn't load data when logging in and redirecting directly to the page
 
 @Component({
   selector: 'prs-request-management',
@@ -54,6 +55,11 @@ export class RequestManagementComponent implements OnDestroy {
   }
 
   approveMovieRequest(movieRequest: MovieRequestApi): void {
-    this.store.dispatch(approveMovieRequest({ id: movieRequest.id }));
+    this.store.dispatch(
+      approveMovieRequest({
+        id: movieRequest.id,
+        qualityProfileId: movieRequest.qualityProfileId,
+      })
+    );
   }
 }

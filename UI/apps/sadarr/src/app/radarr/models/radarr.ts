@@ -4,7 +4,7 @@ export interface Movie {
   length: number;
   monitored: boolean;
   overview: string;
-  profileId: number;
+  profileId: number; // TODO - Ctrl shift f for profileId and change to qualityProfileId
   rating?: number;
   remotePoster: string;
   requested: boolean;
@@ -16,13 +16,12 @@ export interface Movie {
 }
 
 export interface AddEvent {
-  id?: number;
-  profileId: number;
+  qualityProfileId: number;
   tmdbId: number;
 }
 
 export interface RequestEvent {
-  id?: number;
-  profileId: number;
-  tmdbId: number;
+  movieDbid: number;
+  name: string;
+  qualityProfileId: number;
 }
