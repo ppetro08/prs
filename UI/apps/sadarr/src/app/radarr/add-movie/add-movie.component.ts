@@ -11,6 +11,7 @@ import { debounceTime, takeUntil } from 'rxjs/operators';
 import { UsersRoles } from '../../authentication/models/user.model';
 import { getAuthenticationUsersRoles } from '../../authentication/state/authentication.selectors';
 import { Profile } from '../../shared/profile-select/profile';
+import { requestMovie } from '../../shared/state/core-state.actions';
 import { getMovieProfiles } from '../../shared/state/core-state.selectors';
 import { AddEvent, Movie, RequestEvent } from '../models/radarr';
 import { ResultsContainerComponent } from '../results/container/results-container.component';
@@ -18,7 +19,6 @@ import {
   addMovie,
   clearSearch,
   radarrInit,
-  requestMovie,
   search,
 } from '../state/radarr.actions';
 import {

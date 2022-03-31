@@ -1,6 +1,5 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { Action, createReducer, on } from '@ngrx/store';
-import { RootFolderApi } from '../../shared/models/root-folder-api';
 import { MovieLookupApi } from '../models/radarr-api';
 import * as RadarrActions from './radarr.actions';
 
@@ -11,7 +10,6 @@ export const RADARR_FEATURE_KEY = 'radarr';
 export interface State extends EntityState<MovieLookupApi> {
   error?: string | null; // last known error (if any)
   loading: boolean;
-  rootFolders: RootFolderApi[];
   searchLoading: boolean | null;
   searchResults: MovieLookupApi[];
   searchText: string | null;
@@ -21,19 +19,22 @@ export interface RadarrPartialState {
   readonly [RADARR_FEATURE_KEY]: State;
 }
 
-export function sortComparer(a: MovieLookupApi, b: MovieLookupApi): number {
+function sortComparer(a: MovieLookupApi, b: MovieLookupApi): number {
   return a.title.localeCompare(b.title);
 }
 
+function selectId(mla: MovieLookupApi): number {
+  return mla.id;
+}
+
 export const radarrAdapter: EntityAdapter<MovieLookupApi> =
-  createEntityAdapter<MovieLookupApi>({ sortComparer });
+  createEntityAdapter<MovieLookupApi>({ sortComparer, selectId });
 
 export const initialState: State = radarrAdapter.getInitialState({
   loading: false,
   movieRequestSet: null,
   movieRequests: [],
   profiles: [],
-  rootFolders: [],
   searchLoading: null,
   searchResults: [],
   searchText: null,
@@ -48,11 +49,10 @@ const radarrReducer = createReducer(
     error: null,
     loading: true,
   })),
-  on(RadarrActions.radarrInitSuccess, (state, { entities, rootFolders }) =>
+  on(RadarrActions.radarrInitSuccess, (state, { entities }) =>
     radarrAdapter.setAll(entities, {
       ...state,
       loaded: true,
-      rootFolders,
     })
   ),
   on(RadarrActions.radarrInitFailure, (state, { error }) => ({

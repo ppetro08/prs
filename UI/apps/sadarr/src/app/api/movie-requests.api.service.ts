@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MovieLookupApi } from '../radarr/models/radarr-api';
 import { PrsApiService } from '../shared/api/prs.api.service';
 import {
   MovieRequestAddApi,
@@ -11,6 +12,17 @@ export class MovieRequestsApiService {
   private readonly endpoint = 'movieRequest';
 
   constructor(private prsApiService: PrsApiService) {}
+
+  addMovie(
+    tmdbId: number,
+    qualityProfileId?: number
+  ): Observable<MovieLookupApi> {
+    let url = `${this.endpoint}/AddMovie?tmdbId=${tmdbId}`;
+    if (qualityProfileId) {
+      url += `&qualityProfileId=${qualityProfileId}`;
+    }
+    return this.prsApiService.post(url, null);
+  }
 
   addMovieRequest(
     movieRequestAdd: MovieRequestAddApi
@@ -29,6 +41,7 @@ export class MovieRequestsApiService {
   }
 
   getAllRequests(): Observable<MovieRequestApi[]> {
+    // TODO - This is getting called before header is being set after login
     return this.prsApiService.get<MovieRequestApi[]>(this.endpoint);
   }
 

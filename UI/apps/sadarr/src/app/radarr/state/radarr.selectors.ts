@@ -1,6 +1,5 @@
 import { Dictionary } from '@ngrx/entity';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { RootFolderApi } from '../../shared/models/root-folder-api';
 import { getMovieRequestSet } from '../../shared/state/core-state.selectors';
 import { capitalizeFirstLetter } from '../../shared/utils/string-extensions';
 import { Movie } from '../models/radarr';
@@ -36,21 +35,6 @@ export const getRadarrMovies = (seriesId: number) =>
     getRadarrMoviesDictionary,
     (seriesDictionary: Dictionary<MovieLookupApi>) => seriesDictionary[seriesId]
   );
-
-export const getRadarrRootFolders = createSelector(
-  getRadarrState,
-  (state: State) => state.rootFolders
-);
-
-export function getRadarrDefaultFolderFromRootFolders(
-  rootFolders: RootFolderApi[]
-): string | null {
-  return rootFolders ? rootFolders[0].path : null;
-}
-export const getRadarrDefaultRootFolderPath = createSelector(
-  getRadarrRootFolders,
-  (rootFolders) => getRadarrDefaultFolderFromRootFolders(rootFolders)
-);
 
 export const getRadarrSearchResults = createSelector(
   getRadarrState,
