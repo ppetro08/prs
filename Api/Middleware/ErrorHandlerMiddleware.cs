@@ -1,4 +1,5 @@
 ﻿using Prs_Api.Core.Exceptions;
+using Serilog;
 using System.Net;
 using System.Text.Json;
 
@@ -30,7 +31,7 @@ namespace Prs_Api.ErrorHandling
                         // custom application error
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
-                    case KeyNotFoundException e:
+                    case KeyNotFoundException:
                         // not found error
                         response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
@@ -40,7 +41,8 @@ namespace Prs_Api.ErrorHandling
                         break;
                 }
 
-                var result = JsonSerializer.Serialize(new { message = error?.Message });
+                Log.Error(error, "Test");
+                var result = JsonSerializer.Serialize(new { message = error.Message, data = error.Data, innerException = error.InnerException, innerExceptionMessage = error.InnerException?.Message, stackTrace = error.StackTrace });
                 await response.WriteAsync(result);
             }
         }

@@ -11,9 +11,15 @@ using Prs_Api.Extensions;
 using Prs_Api.Middleware;
 using Prs_Api.Models;
 using Prs_Api.Models.Configuration;
+using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
+
+Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(builder.Configuration)
+                .CreateLogger();
 
 builder.Services.AddCors();
 // Database
@@ -26,6 +32,7 @@ builder.Services
     .AddIdentity<User, Role>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<Role>()
     .AddEntityFrameworkStores<AppDbContext>();
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
@@ -110,14 +117,17 @@ builder.Services.AddManagersAndServices();
 builder.Services.AddHttpClients(appSettings);
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
 }
+
+    app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseCors(x => x
     .AllowAnyOrigin()

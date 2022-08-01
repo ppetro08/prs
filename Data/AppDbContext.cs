@@ -9,6 +9,7 @@ namespace Prs_Api.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
+            
         }
 
         public DbSet<User> AppUsers { get; set; }
@@ -48,21 +49,21 @@ namespace Prs_Api.Data
             PasswordHasher<User> passwordHasher = new PasswordHasher<User>();
             admin.PasswordHash = passwordHasher.HashPassword(admin, "Testing123!");
 
-            var requester = new User
-            {
-                Id = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9"),
-                NormalizedEmail = "REQUESTER@GMAIL.COM",
-                Email = "requester@gmail.com",
-                EmailConfirmed = true,
-                NormalizedUserName = "REQUESTER@GMAIL.COM",
-                UserName = "requester@gmail.com",
-                LastName = "Requester",
-                SecurityStamp = new Guid().ToString()
-            };
-            passwordHasher = new PasswordHasher<User>();
-            requester.PasswordHash = passwordHasher.HashPassword(requester, "Testing123!");
+            //var requester = new User
+            //{
+            //    Id = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9"),
+            //    NormalizedEmail = "REQUESTER@GMAIL.COM",
+            //    Email = "requester@gmail.com",
+            //    EmailConfirmed = true,
+            //    NormalizedUserName = "REQUESTER@GMAIL.COM",
+            //    UserName = "requester@gmail.com",
+            //    LastName = "Requester",
+            //    SecurityStamp = new Guid().ToString()
+            //};
+            //passwordHasher = new PasswordHasher<User>();
+            //requester.PasswordHash = passwordHasher.HashPassword(requester, "Testing123!");
 
-            modelBuilder.Entity<User>().HasData(admin, requester);
+            modelBuilder.Entity<User>().HasData(admin);
         }
 
         private void SeedRoles(ModelBuilder modelBuilder)
@@ -116,41 +117,23 @@ namespace Prs_Api.Data
                     {
                         RoleId = new Guid("a873fe11-88ec-4d46-bf93-930840a945db"),
                         UserId = new Guid("103972dd-e25b-4ea6-a84a-b7db0cd9020d")
-                    },
-                    new UserRole
-                    {
-                        RoleId = new Guid("e9415c2a-f804-4c6b-a849-b015f80a8348"),
-                        UserId = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9")
-                    },
-                    new UserRole
-                    {
-                        RoleId = new Guid("6fe5a246-0e24-4260-9ca9-2abc9633ce46"),
-                        UserId = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9")
                     }
+                    //new UserRole
+                    //{
+                    //    RoleId = new Guid("e9415c2a-f804-4c6b-a849-b015f80a8348"),
+                    //    UserId = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9")
+                    //},
+                    //new UserRole
+                    //{
+                    //    RoleId = new Guid("6fe5a246-0e24-4260-9ca9-2abc9633ce46"),
+                    //    UserId = new Guid("2a37aec6-c674-46f4-b453-c7c4d1978cb9")
+                    //}
                 );
         }
 
         private void SeedMovieRequests(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MovieRequest>().ToTable("MovieRequest")
-                .HasData(
-                    new MovieRequest
-                    {
-                        Id = 1,
-                        ApproveDate = DateTime.Now,
-                        CreateDate = DateTime.Now,
-                        MovieDbid = 1234,
-                        UserId = new Guid("103972dd-e25b-4ea6-a84a-b7db0cd9020d")
-                    },
-                    new MovieRequest
-                    {
-                        Id = 2,
-                        ApproveDate = null,
-                        CreateDate = DateTime.Now,
-                        MovieDbid = 1234,
-                        UserId = new Guid("103972dd-e25b-4ea6-a84a-b7db0cd9020d")
-                    }
-                );
+            modelBuilder.Entity<MovieRequest>().ToTable("MovieRequest");
         }
 
         private void SeedTvRequests(ModelBuilder modelBuilder)
