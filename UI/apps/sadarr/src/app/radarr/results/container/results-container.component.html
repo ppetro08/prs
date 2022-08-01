@@ -1,6 +1,6 @@
 <div class="no-results-found" *ngIf="showNoResultsFound">No results found</div>
 <!-- TODO - Custom scrollbar -->
-<cdk-virtual-scroll-viewport itemSize="459" min-buffer="918" max-buffer="1836">
+<cdk-virtual-scroll-viewport itemSize="350" min-buffer="1050" max-buffer="2100">
   <pip-radarr-results-item
     *cdkVirtualFor="let item of data"
     [item]="item"

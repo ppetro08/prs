@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+:host {
+  width: 100%;
+  display: flex;
+  border-bottom: $border-color;
+  background-color: #464b51;
+  height: 50px;
+  -webkit-box-shadow: 0px 0px 10px 0px #111;
+  -moz-box-shadow: 0px 0px 10px 0px #111;
+  box-shadow: 0px 0px 10px 0px #111;
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+  }
+
+  .username {
+    color: white;
+    margin-right: 0.5em;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.nav-bar-left,
+.nav-bar-right {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.nav-bar-right {
+  margin-left: auto;
+}

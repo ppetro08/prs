@@ -2,5 +2,5 @@ export const environment = {
   production: true,
   useEmulators: false,
   e2e: false,
-  prsApiUrl: '',
+  prsApiUrl: 'https://localhost:38011',
 };

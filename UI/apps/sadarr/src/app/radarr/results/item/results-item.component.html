@@ -34,7 +34,11 @@
       >
         Downloaded
       </pip-lozenge>
-      <pip-lozenge *ngIf="item.profileId" [lozengeSize]="'small'">
+      <pip-lozenge
+        *ngIf="item.profileId"
+        [lozengeColor]="'success'"
+        [lozengeSize]="'small'"
+      >
         {{ item.profileId | pipQuality | async }}
       </pip-lozenge>
     </div>
@@ -80,13 +84,13 @@
           </ng-container>
           <ng-template #goToDetailPage>
             <!-- TODO:P - Update routerLink -->
-            <a
+            <!-- <a
               mat-raised-button
               color="primary"
               [routerLink]="['/movies', item.id]"
             >
               Go to detail page
-            </a>
+            </a> -->
           </ng-template>
         </div>
       </div>

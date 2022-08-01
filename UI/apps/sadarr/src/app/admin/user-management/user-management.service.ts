@@ -8,10 +8,10 @@ import { UserManagementFormValue } from './user-management';
 export class UserManagementService {
   constructor(private prsApiService: PrsApiService) {}
   getUsers(): Observable<UserModel[]> {
-    // TODO - Implement me
     return this.prsApiService.get<UserModel[]>('User');
   }
   saveUser(adminFormValue: UserManagementFormValue): Observable<void> {
+    // TODO - Implement me
     return of();
   }
 }

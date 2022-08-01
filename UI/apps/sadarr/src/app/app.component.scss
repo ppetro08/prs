@@ -8,37 +8,6 @@
   background-color: $background-color;
 }
 
-.nav-bar {
-  flex: 0 0 50px;
-  width: 100%;
-  display: flex;
-  border-bottom: $border-color;
-  margin-bottom: 2em;
-  background-color: #464b51;
-
-  .nav-item {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  .username {
-    color: white;
-    margin-right: 0.5em;
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-
-.nav-bar-left,
-.nav-bar-right {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.nav-bar-right {
-  margin-left: auto;
+.pip-nav-bar {
+  margin-bottom: 1em;
 }

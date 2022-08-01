@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
@@ -16,6 +15,7 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { AuthenticationEffects } from './authentication/state/authentication.effects';
 import * as AuthenticationReducer from './authentication/state/authentication.reducer';
 import { HomeModule } from './home/home.module';
+import { NavBarModule } from './nav-bar/nav-bar.module';
 import { routerStateKey } from './router/router.reducer';
 import { API_SETTINGS } from './shared/api/app-settings';
 import { CoreEffects } from './shared/state/core-state.effects';
@@ -30,7 +30,7 @@ import * as fromCore from './shared/state/core-state.reducer';
     BrowserModule,
     HomeModule,
     HttpClientModule,
-    MatButtonModule,
+    NavBarModule,
     StoreModule.forRoot(
       {
         [AuthenticationReducer.AUTHENTICATION_FEATURE_KEY]:

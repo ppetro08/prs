@@ -1,0 +1,28 @@
+<!-- TODO - Update nav bar for mobile; update styles -->
+<div class="nav-bar-left">
+  <a class="nav-item" mat-button routerLink="/">Home</a>
+  <button class="nav-item" mat-button [matMenuTriggerFor]="moviesMenu">
+    Movies
+  </button>
+  <mat-menu #moviesMenu>
+    <a mat-menu-item routerLink="radarr/add-movie">Add Movie</a>
+    <a mat-menu-item routerLink="radarr/movies">Existing Movies</a>
+  </mat-menu>
+  <!-- <a class="nav-item" mat-button routerLink="/sonarr">Tv Shows</a> -->
+  <button
+    class="nav-item"
+    mat-button
+    *ngIf="isAdmin | async"
+    [matMenuTriggerFor]="adminMenu"
+  >
+    Admin
+  </button>
+  <mat-menu #adminMenu>
+    <a mat-menu-item routerLink="admin/user-management">Users</a>
+    <a mat-menu-item routerLink="admin/request-management">Requests</a>
+  </mat-menu>
+</div>
+<div class="nav-bar-right">
+  <div class="username" *ngIf="userName">{{ userName }}</div>
+  <button class="nav-item logout" mat-button (click)="logout()">Logout</button>
+</div>

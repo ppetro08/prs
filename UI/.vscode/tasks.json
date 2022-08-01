@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "deploy-ui",
+      "type": "shell",
+      "command": "powershell -file '${cwd}/.vscode/deploy-ui.ps1'",
+      "problemMatcher": []
+    },
+    {
+      "label": "deploy-api",
+      "type": "shell",
+      "command": "powershell -file '${cwd}/.vscode/deploy-api.ps1'",
+      "problemMatcher": []
+    }
+  ]
+}

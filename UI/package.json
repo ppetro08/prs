@@ -6,6 +6,7 @@
     "ng": "nx",
     "start": "nx serve -o",
     "build": "nx build",
+    "build:prod": "nx build --prod",
     "test": "nx test",
     "storybook": "nx run sadarr:storybook",
     "e2e": "nx run sadarr-e2e:e2e",
